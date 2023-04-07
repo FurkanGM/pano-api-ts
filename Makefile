@@ -4,6 +4,7 @@ OUT_DIR="./protos"
 
 gen:
 	@echo "Generating proto files..."
+	find protos -not -name service.proto -delete
 	protoc \
         -I ./protos \
         --plugin=protoc-gen-ts_proto=${PROTOC_GEN_TS_BIN} \
