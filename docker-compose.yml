@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: panoapi
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: securelypassword
+    ports:
+      - "5502:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - pano-api
+
+#  app:
+#    build: .
+#    ports:
+#      - "5500:3000"
+#    depends_on:
+#      - db
+#    networks:
+#      - pano-api
+#    environment:
+#      DATABASE_URL: postgresql://user:securelypassword@db:5432/panoapi
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@kamp.us
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5501:80"
+    networks:
+      - pano-api
+
+networks:
+  pano-api:
+    driver: bridge
+volumes:
+  db-data:
