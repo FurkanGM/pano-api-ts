@@ -12,7 +12,6 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
-import { Timestamp } from "./google/protobuf/timestamp";
 import { StringValue } from "./google/protobuf/wrappers";
 /**
  * Post Start
@@ -242,10 +241,6 @@ export interface CreateCommentRequest {
      * @generated from protobuf field: google.protobuf.StringValue parent_id = 4;
      */
     parentId?: StringValue;
-    /**
-     * @generated from protobuf field: google.protobuf.Timestamp deletedAt = 5;
-     */
-    deletedAt?: Timestamp;
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreateCommentResponse
@@ -1251,8 +1246,7 @@ class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
             { no: 1, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 3, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "parent_id", kind: "message", T: () => StringValue },
-            { no: 5, name: "deletedAt", kind: "message", T: () => Timestamp }
+            { no: 4, name: "parent_id", kind: "message", T: () => StringValue }
         ]);
     }
     create(value?: PartialMessage<CreateCommentRequest>): CreateCommentRequest {
@@ -1279,9 +1273,6 @@ class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
                 case /* google.protobuf.StringValue parent_id */ 4:
                     message.parentId = StringValue.internalBinaryRead(reader, reader.uint32(), options, message.parentId);
                     break;
-                case /* google.protobuf.Timestamp deletedAt */ 5:
-                    message.deletedAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.deletedAt);
-                    break;
                 default:
                     let u = options.readUnknownField;
                     if (u === "throw")
@@ -1306,9 +1297,6 @@ class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
         /* google.protobuf.StringValue parent_id = 4; */
         if (message.parentId)
             StringValue.internalBinaryWrite(message.parentId, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
-        /* google.protobuf.Timestamp deletedAt = 5; */
-        if (message.deletedAt)
-            Timestamp.internalBinaryWrite(message.deletedAt, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

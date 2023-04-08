@@ -3,7 +3,7 @@ syntax = "proto3";
 package kampus.panoapi;
 
 import "google/protobuf/wrappers.proto";
-import "google/protobuf/timestamp.proto";
+// import "google/protobuf/timestamp.proto";
 // import "google/protobuf/empty.proto";
 
 service PanoAPI {
@@ -118,7 +118,6 @@ message CreateCommentRequest {
   string user_id = 2; // required
   string post_id = 3;  // required
   google.protobuf.StringValue parent_id = 4;
-  google.protobuf.Timestamp deletedAt = 5;
 }
 
 message CreateCommentResponse {
