@@ -1,11 +1,7 @@
 import {PrismaClient} from "@prisma/client";
-import bcrypt from "bcryptjs";
 import {slugify} from "../src/support/Helper";
+import {randomUUID} from "crypto";
 
-const users = [
-    {username: "admin", email: "admin@kamp.us", password: "123123"},
-    {username: "testuser", email: "user1a@kamp.us", password: "123123123"},
-];
 const posts = [
     {
         title: "Hacker News",
@@ -86,7 +82,6 @@ const posts = [
     },
 ];
 
-type User = { username: string; email: string; password: string };
 type Post = {
     title: string;
     url?: string;
@@ -98,56 +93,7 @@ type Post = {
 
 const prisma = new PrismaClient();
 
-async function seedAll(users: User[], posts: Post[]) {
-    let postOwnerIDs: string[] = [];
-    for (const user of users) {
-        const email: string = user.email;
-        const username: string = user.username;
-
-        const hashedPassword = await bcrypt.hash(user.password, 10);
-
-        const prismaUser = await prisma.user.upsert({
-            where: {
-                username,
-            },
-            update: {
-                username,
-                email,
-                password: {
-                    update: {
-                        hash: hashedPassword,
-                    },
-                },
-            },
-            create: {
-                username,
-                email,
-                password: {
-                    create: {
-                        hash: hashedPassword,
-                    },
-                },
-            },
-        });
-        postOwnerIDs.push(prismaUser.id);
-
-        const prismaUserPreferences = await prisma.userPreference.upsert({
-            where: {
-                userID: prismaUser.id,
-            },
-            update: {
-                userID: prismaUser.id,
-            },
-            create: {
-                user: {
-                    connect: {
-                        id: prismaUser.id,
-                    },
-                },
-            },
-        });
-    }
-
+async function seedAll(posts: Post[]) {
     for (const post of posts) {
         const title: string = post.title;
         const url: string | null = post.url || null;
@@ -173,22 +119,12 @@ async function seedAll(users: User[], posts: Post[]) {
                 site,
                 slug,
                 content,
-                owner: {
-                    connect: {
-                        id: postOwnerIDs[Math.floor(Math.random() * postOwnerIDs.length)],
-                    },
-                },
+                userID: randomUUID(),
                 comments: {
                     create: comments.map((comment) => {
                         return {
                             content: comment.content,
-                            owner: {
-                                connect: {
-                                    id: postOwnerIDs[
-                                        Math.floor(Math.random() * postOwnerIDs.length)
-                                        ],
-                                },
-                            },
+                            userID: randomUUID(),
                         };
                     }),
                 },
@@ -197,7 +133,7 @@ async function seedAll(users: User[], posts: Post[]) {
     }
 }
 
-seedAll(users, posts)
+seedAll(posts)
     .catch((e) => {
         console.error(e);
         process.exit(1);
