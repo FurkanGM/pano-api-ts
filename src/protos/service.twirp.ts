@@ -91,64 +91,92 @@ export class PanoAPIClientJSON implements PanoAPIClient {
     this.IsUpvoted.bind(this);
   }
   GetBatchPosts(request: GetBatchPostsRequest): Promise<GetBatchPostsResponse> {
-    const data = GetBatchPostsRequest.toJSON(request);
+    const data = GetBatchPostsRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetBatchPosts",
       "application/json",
       data as object
     );
-    return promise.then((data) => GetBatchPostsResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      GetBatchPostsResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   GetPosts(request: GetPostsRequest): Promise<GetPostsResponse> {
-    const data = GetPostsRequest.toJSON(request);
+    const data = GetPostsRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetPosts",
       "application/json",
       data as object
     );
-    return promise.then((data) => GetPostsResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      GetPostsResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   CreatePost(request: CreatePostRequest): Promise<CreatePostResponse> {
-    const data = CreatePostRequest.toJSON(request);
+    const data = CreatePostRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreatePost",
       "application/json",
       data as object
     );
-    return promise.then((data) => CreatePostResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      CreatePostResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   UpdatePost(request: UpdatePostRequest): Promise<UpdatePostResponse> {
-    const data = UpdatePostRequest.toJSON(request);
+    const data = UpdatePostRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "UpdatePost",
       "application/json",
       data as object
     );
-    return promise.then((data) => UpdatePostResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      UpdatePostResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   DeletePost(request: DeletePostRequest): Promise<DeletePostResponse> {
-    const data = DeletePostRequest.toJSON(request);
+    const data = DeletePostRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeletePost",
       "application/json",
       data as object
     );
-    return promise.then((data) => DeletePostResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      DeletePostResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   GetBatchComments(
     request: GetBatchCommentsRequest
   ): Promise<GetBatchCommentsResponse> {
-    const data = GetBatchCommentsRequest.toJSON(request);
+    const data = GetBatchCommentsRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetBatchComments",
@@ -156,96 +184,138 @@ export class PanoAPIClientJSON implements PanoAPIClient {
       data as object
     );
     return promise.then((data) =>
-      GetBatchCommentsResponse.fromJSON(data as any)
+      GetBatchCommentsResponse.fromJson(data as any, {
+        ignoreUnknownFields: true,
+      })
     );
   }
 
   GetComments(request: GetCommentsRequest): Promise<GetCommentsResponse> {
-    const data = GetCommentsRequest.toJSON(request);
+    const data = GetCommentsRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetComments",
       "application/json",
       data as object
     );
-    return promise.then((data) => GetCommentsResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      GetCommentsResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   CreateComment(request: CreateCommentRequest): Promise<CreateCommentResponse> {
-    const data = CreateCommentRequest.toJSON(request);
+    const data = CreateCommentRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreateComment",
       "application/json",
       data as object
     );
-    return promise.then((data) => CreateCommentResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      CreateCommentResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   UpdateComment(request: UpdateCommentRequest): Promise<UpdateCommentResponse> {
-    const data = UpdateCommentRequest.toJSON(request);
+    const data = UpdateCommentRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "UpdateComment",
       "application/json",
       data as object
     );
-    return promise.then((data) => UpdateCommentResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      UpdateCommentResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   DeleteComment(request: DeleteCommentRequest): Promise<DeleteCommentResponse> {
-    const data = DeleteCommentRequest.toJSON(request);
+    const data = DeleteCommentRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeleteComment",
       "application/json",
       data as object
     );
-    return promise.then((data) => DeleteCommentResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      DeleteCommentResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   GetUpvotes(request: GetUpvotesRequest): Promise<GetUpvotesResponse> {
-    const data = GetUpvotesRequest.toJSON(request);
+    const data = GetUpvotesRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetUpvotes",
       "application/json",
       data as object
     );
-    return promise.then((data) => GetUpvotesResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      GetUpvotesResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   CreateUpvote(request: CreateUpvoteRequest): Promise<CreateUpvoteResponse> {
-    const data = CreateUpvoteRequest.toJSON(request);
+    const data = CreateUpvoteRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreateUpvote",
       "application/json",
       data as object
     );
-    return promise.then((data) => CreateUpvoteResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      CreateUpvoteResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   DeleteUpvote(request: DeleteUpvoteRequest): Promise<DeleteUpvoteResponse> {
-    const data = DeleteUpvoteRequest.toJSON(request);
+    const data = DeleteUpvoteRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeleteUpvote",
       "application/json",
       data as object
     );
-    return promise.then((data) => DeleteUpvoteResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      DeleteUpvoteResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 
   IsUpvoted(request: IsUpvotedRequest): Promise<IsUpvotedResponse> {
-    const data = IsUpvotedRequest.toJSON(request);
+    const data = IsUpvotedRequest.toJson(request, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    });
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "IsUpvoted",
       "application/json",
       data as object
     );
-    return promise.then((data) => IsUpvotedResponse.fromJSON(data as any));
+    return promise.then((data) =>
+      IsUpvotedResponse.fromJson(data as any, { ignoreUnknownFields: true })
+    );
   }
 }
 
@@ -269,7 +339,7 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
     this.IsUpvoted.bind(this);
   }
   GetBatchPosts(request: GetBatchPostsRequest): Promise<GetBatchPostsResponse> {
-    const data = GetBatchPostsRequest.encode(request).finish();
+    const data = GetBatchPostsRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetBatchPosts",
@@ -277,23 +347,25 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      GetBatchPostsResponse.decode(data as Uint8Array)
+      GetBatchPostsResponse.fromBinary(data as Uint8Array)
     );
   }
 
   GetPosts(request: GetPostsRequest): Promise<GetPostsResponse> {
-    const data = GetPostsRequest.encode(request).finish();
+    const data = GetPostsRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetPosts",
       "application/protobuf",
       data
     );
-    return promise.then((data) => GetPostsResponse.decode(data as Uint8Array));
+    return promise.then((data) =>
+      GetPostsResponse.fromBinary(data as Uint8Array)
+    );
   }
 
   CreatePost(request: CreatePostRequest): Promise<CreatePostResponse> {
-    const data = CreatePostRequest.encode(request).finish();
+    const data = CreatePostRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreatePost",
@@ -301,12 +373,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      CreatePostResponse.decode(data as Uint8Array)
+      CreatePostResponse.fromBinary(data as Uint8Array)
     );
   }
 
   UpdatePost(request: UpdatePostRequest): Promise<UpdatePostResponse> {
-    const data = UpdatePostRequest.encode(request).finish();
+    const data = UpdatePostRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "UpdatePost",
@@ -314,12 +386,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      UpdatePostResponse.decode(data as Uint8Array)
+      UpdatePostResponse.fromBinary(data as Uint8Array)
     );
   }
 
   DeletePost(request: DeletePostRequest): Promise<DeletePostResponse> {
-    const data = DeletePostRequest.encode(request).finish();
+    const data = DeletePostRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeletePost",
@@ -327,14 +399,14 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      DeletePostResponse.decode(data as Uint8Array)
+      DeletePostResponse.fromBinary(data as Uint8Array)
     );
   }
 
   GetBatchComments(
     request: GetBatchCommentsRequest
   ): Promise<GetBatchCommentsResponse> {
-    const data = GetBatchCommentsRequest.encode(request).finish();
+    const data = GetBatchCommentsRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetBatchComments",
@@ -342,12 +414,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      GetBatchCommentsResponse.decode(data as Uint8Array)
+      GetBatchCommentsResponse.fromBinary(data as Uint8Array)
     );
   }
 
   GetComments(request: GetCommentsRequest): Promise<GetCommentsResponse> {
-    const data = GetCommentsRequest.encode(request).finish();
+    const data = GetCommentsRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetComments",
@@ -355,12 +427,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      GetCommentsResponse.decode(data as Uint8Array)
+      GetCommentsResponse.fromBinary(data as Uint8Array)
     );
   }
 
   CreateComment(request: CreateCommentRequest): Promise<CreateCommentResponse> {
-    const data = CreateCommentRequest.encode(request).finish();
+    const data = CreateCommentRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreateComment",
@@ -368,12 +440,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      CreateCommentResponse.decode(data as Uint8Array)
+      CreateCommentResponse.fromBinary(data as Uint8Array)
     );
   }
 
   UpdateComment(request: UpdateCommentRequest): Promise<UpdateCommentResponse> {
-    const data = UpdateCommentRequest.encode(request).finish();
+    const data = UpdateCommentRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "UpdateComment",
@@ -381,12 +453,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      UpdateCommentResponse.decode(data as Uint8Array)
+      UpdateCommentResponse.fromBinary(data as Uint8Array)
     );
   }
 
   DeleteComment(request: DeleteCommentRequest): Promise<DeleteCommentResponse> {
-    const data = DeleteCommentRequest.encode(request).finish();
+    const data = DeleteCommentRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeleteComment",
@@ -394,12 +466,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      DeleteCommentResponse.decode(data as Uint8Array)
+      DeleteCommentResponse.fromBinary(data as Uint8Array)
     );
   }
 
   GetUpvotes(request: GetUpvotesRequest): Promise<GetUpvotesResponse> {
-    const data = GetUpvotesRequest.encode(request).finish();
+    const data = GetUpvotesRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "GetUpvotes",
@@ -407,12 +479,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      GetUpvotesResponse.decode(data as Uint8Array)
+      GetUpvotesResponse.fromBinary(data as Uint8Array)
     );
   }
 
   CreateUpvote(request: CreateUpvoteRequest): Promise<CreateUpvoteResponse> {
-    const data = CreateUpvoteRequest.encode(request).finish();
+    const data = CreateUpvoteRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "CreateUpvote",
@@ -420,12 +492,12 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      CreateUpvoteResponse.decode(data as Uint8Array)
+      CreateUpvoteResponse.fromBinary(data as Uint8Array)
     );
   }
 
   DeleteUpvote(request: DeleteUpvoteRequest): Promise<DeleteUpvoteResponse> {
-    const data = DeleteUpvoteRequest.encode(request).finish();
+    const data = DeleteUpvoteRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "DeleteUpvote",
@@ -433,19 +505,21 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
       data
     );
     return promise.then((data) =>
-      DeleteUpvoteResponse.decode(data as Uint8Array)
+      DeleteUpvoteResponse.fromBinary(data as Uint8Array)
     );
   }
 
   IsUpvoted(request: IsUpvotedRequest): Promise<IsUpvotedResponse> {
-    const data = IsUpvotedRequest.encode(request).finish();
+    const data = IsUpvotedRequest.toBinary(request);
     const promise = this.rpc.request(
       "kampus.panoapi.PanoAPI",
       "IsUpvoted",
       "application/protobuf",
       data
     );
-    return promise.then((data) => IsUpvotedResponse.decode(data as Uint8Array));
+    return promise.then((data) =>
+      IsUpvotedResponse.fromBinary(data as Uint8Array)
+    );
   }
 }
 
@@ -1132,7 +1206,9 @@ async function handlePanoAPIGetBatchPostsJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = GetBatchPostsRequest.fromJSON(body);
+    request = GetBatchPostsRequest.fromJson(body, {
+      ignoreUnknownFields: true,
+    });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1153,7 +1229,12 @@ async function handlePanoAPIGetBatchPostsJSON<
     response = await service.GetBatchPosts(ctx, request!);
   }
 
-  return JSON.stringify(GetBatchPostsResponse.toJSON(response) as string);
+  return JSON.stringify(
+    GetBatchPostsResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIGetPostsJSON<T extends TwirpContext = TwirpContext>(
@@ -1167,7 +1248,7 @@ async function handlePanoAPIGetPostsJSON<T extends TwirpContext = TwirpContext>(
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = GetPostsRequest.fromJSON(body);
+    request = GetPostsRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1188,7 +1269,12 @@ async function handlePanoAPIGetPostsJSON<T extends TwirpContext = TwirpContext>(
     response = await service.GetPosts(ctx, request!);
   }
 
-  return JSON.stringify(GetPostsResponse.toJSON(response) as string);
+  return JSON.stringify(
+    GetPostsResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPICreatePostJSON<
@@ -1204,7 +1290,7 @@ async function handlePanoAPICreatePostJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = CreatePostRequest.fromJSON(body);
+    request = CreatePostRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1225,7 +1311,12 @@ async function handlePanoAPICreatePostJSON<
     response = await service.CreatePost(ctx, request!);
   }
 
-  return JSON.stringify(CreatePostResponse.toJSON(response) as string);
+  return JSON.stringify(
+    CreatePostResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIUpdatePostJSON<
@@ -1241,7 +1332,7 @@ async function handlePanoAPIUpdatePostJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = UpdatePostRequest.fromJSON(body);
+    request = UpdatePostRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1262,7 +1353,12 @@ async function handlePanoAPIUpdatePostJSON<
     response = await service.UpdatePost(ctx, request!);
   }
 
-  return JSON.stringify(UpdatePostResponse.toJSON(response) as string);
+  return JSON.stringify(
+    UpdatePostResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIDeletePostJSON<
@@ -1278,7 +1374,7 @@ async function handlePanoAPIDeletePostJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = DeletePostRequest.fromJSON(body);
+    request = DeletePostRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1299,7 +1395,12 @@ async function handlePanoAPIDeletePostJSON<
     response = await service.DeletePost(ctx, request!);
   }
 
-  return JSON.stringify(DeletePostResponse.toJSON(response) as string);
+  return JSON.stringify(
+    DeletePostResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIGetBatchCommentsJSON<
@@ -1319,7 +1420,9 @@ async function handlePanoAPIGetBatchCommentsJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = GetBatchCommentsRequest.fromJSON(body);
+    request = GetBatchCommentsRequest.fromJson(body, {
+      ignoreUnknownFields: true,
+    });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1340,7 +1443,12 @@ async function handlePanoAPIGetBatchCommentsJSON<
     response = await service.GetBatchComments(ctx, request!);
   }
 
-  return JSON.stringify(GetBatchCommentsResponse.toJSON(response) as string);
+  return JSON.stringify(
+    GetBatchCommentsResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIGetCommentsJSON<
@@ -1356,7 +1464,7 @@ async function handlePanoAPIGetCommentsJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = GetCommentsRequest.fromJSON(body);
+    request = GetCommentsRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1377,7 +1485,12 @@ async function handlePanoAPIGetCommentsJSON<
     response = await service.GetComments(ctx, request!);
   }
 
-  return JSON.stringify(GetCommentsResponse.toJSON(response) as string);
+  return JSON.stringify(
+    GetCommentsResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPICreateCommentJSON<
@@ -1393,7 +1506,9 @@ async function handlePanoAPICreateCommentJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = CreateCommentRequest.fromJSON(body);
+    request = CreateCommentRequest.fromJson(body, {
+      ignoreUnknownFields: true,
+    });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1414,7 +1529,12 @@ async function handlePanoAPICreateCommentJSON<
     response = await service.CreateComment(ctx, request!);
   }
 
-  return JSON.stringify(CreateCommentResponse.toJSON(response) as string);
+  return JSON.stringify(
+    CreateCommentResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIUpdateCommentJSON<
@@ -1430,7 +1550,9 @@ async function handlePanoAPIUpdateCommentJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = UpdateCommentRequest.fromJSON(body);
+    request = UpdateCommentRequest.fromJson(body, {
+      ignoreUnknownFields: true,
+    });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1451,7 +1573,12 @@ async function handlePanoAPIUpdateCommentJSON<
     response = await service.UpdateComment(ctx, request!);
   }
 
-  return JSON.stringify(UpdateCommentResponse.toJSON(response) as string);
+  return JSON.stringify(
+    UpdateCommentResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIDeleteCommentJSON<
@@ -1467,7 +1594,9 @@ async function handlePanoAPIDeleteCommentJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = DeleteCommentRequest.fromJSON(body);
+    request = DeleteCommentRequest.fromJson(body, {
+      ignoreUnknownFields: true,
+    });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1488,7 +1617,12 @@ async function handlePanoAPIDeleteCommentJSON<
     response = await service.DeleteComment(ctx, request!);
   }
 
-  return JSON.stringify(DeleteCommentResponse.toJSON(response) as string);
+  return JSON.stringify(
+    DeleteCommentResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIGetUpvotesJSON<
@@ -1504,7 +1638,7 @@ async function handlePanoAPIGetUpvotesJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = GetUpvotesRequest.fromJSON(body);
+    request = GetUpvotesRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1525,7 +1659,12 @@ async function handlePanoAPIGetUpvotesJSON<
     response = await service.GetUpvotes(ctx, request!);
   }
 
-  return JSON.stringify(GetUpvotesResponse.toJSON(response) as string);
+  return JSON.stringify(
+    GetUpvotesResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPICreateUpvoteJSON<
@@ -1541,7 +1680,7 @@ async function handlePanoAPICreateUpvoteJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = CreateUpvoteRequest.fromJSON(body);
+    request = CreateUpvoteRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1562,7 +1701,12 @@ async function handlePanoAPICreateUpvoteJSON<
     response = await service.CreateUpvote(ctx, request!);
   }
 
-  return JSON.stringify(CreateUpvoteResponse.toJSON(response) as string);
+  return JSON.stringify(
+    CreateUpvoteResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIDeleteUpvoteJSON<
@@ -1578,7 +1722,7 @@ async function handlePanoAPIDeleteUpvoteJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = DeleteUpvoteRequest.fromJSON(body);
+    request = DeleteUpvoteRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1599,7 +1743,12 @@ async function handlePanoAPIDeleteUpvoteJSON<
     response = await service.DeleteUpvote(ctx, request!);
   }
 
-  return JSON.stringify(DeleteUpvoteResponse.toJSON(response) as string);
+  return JSON.stringify(
+    DeleteUpvoteResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 
 async function handlePanoAPIIsUpvotedJSON<
@@ -1615,7 +1764,7 @@ async function handlePanoAPIIsUpvotedJSON<
 
   try {
     const body = JSON.parse(data.toString() || "{}");
-    request = IsUpvotedRequest.fromJSON(body);
+    request = IsUpvotedRequest.fromJson(body, { ignoreUnknownFields: true });
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the json request could not be decoded";
@@ -1636,7 +1785,12 @@ async function handlePanoAPIIsUpvotedJSON<
     response = await service.IsUpvoted(ctx, request!);
   }
 
-  return JSON.stringify(IsUpvotedResponse.toJSON(response) as string);
+  return JSON.stringify(
+    IsUpvotedResponse.toJson(response, {
+      useProtoFieldName: true,
+      emitDefaultValues: false,
+    }) as string
+  );
 }
 async function handlePanoAPIGetBatchPostsProtobuf<
   T extends TwirpContext = TwirpContext
@@ -1650,7 +1804,7 @@ async function handlePanoAPIGetBatchPostsProtobuf<
   let response: GetBatchPostsResponse;
 
   try {
-    request = GetBatchPostsRequest.decode(data);
+    request = GetBatchPostsRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1671,7 +1825,7 @@ async function handlePanoAPIGetBatchPostsProtobuf<
     response = await service.GetBatchPosts(ctx, request!);
   }
 
-  return Buffer.from(GetBatchPostsResponse.encode(response).finish());
+  return Buffer.from(GetBatchPostsResponse.toBinary(response));
 }
 
 async function handlePanoAPIGetPostsProtobuf<
@@ -1686,7 +1840,7 @@ async function handlePanoAPIGetPostsProtobuf<
   let response: GetPostsResponse;
 
   try {
-    request = GetPostsRequest.decode(data);
+    request = GetPostsRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1707,7 +1861,7 @@ async function handlePanoAPIGetPostsProtobuf<
     response = await service.GetPosts(ctx, request!);
   }
 
-  return Buffer.from(GetPostsResponse.encode(response).finish());
+  return Buffer.from(GetPostsResponse.toBinary(response));
 }
 
 async function handlePanoAPICreatePostProtobuf<
@@ -1722,7 +1876,7 @@ async function handlePanoAPICreatePostProtobuf<
   let response: CreatePostResponse;
 
   try {
-    request = CreatePostRequest.decode(data);
+    request = CreatePostRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1743,7 +1897,7 @@ async function handlePanoAPICreatePostProtobuf<
     response = await service.CreatePost(ctx, request!);
   }
 
-  return Buffer.from(CreatePostResponse.encode(response).finish());
+  return Buffer.from(CreatePostResponse.toBinary(response));
 }
 
 async function handlePanoAPIUpdatePostProtobuf<
@@ -1758,7 +1912,7 @@ async function handlePanoAPIUpdatePostProtobuf<
   let response: UpdatePostResponse;
 
   try {
-    request = UpdatePostRequest.decode(data);
+    request = UpdatePostRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1779,7 +1933,7 @@ async function handlePanoAPIUpdatePostProtobuf<
     response = await service.UpdatePost(ctx, request!);
   }
 
-  return Buffer.from(UpdatePostResponse.encode(response).finish());
+  return Buffer.from(UpdatePostResponse.toBinary(response));
 }
 
 async function handlePanoAPIDeletePostProtobuf<
@@ -1794,7 +1948,7 @@ async function handlePanoAPIDeletePostProtobuf<
   let response: DeletePostResponse;
 
   try {
-    request = DeletePostRequest.decode(data);
+    request = DeletePostRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1815,7 +1969,7 @@ async function handlePanoAPIDeletePostProtobuf<
     response = await service.DeletePost(ctx, request!);
   }
 
-  return Buffer.from(DeletePostResponse.encode(response).finish());
+  return Buffer.from(DeletePostResponse.toBinary(response));
 }
 
 async function handlePanoAPIGetBatchCommentsProtobuf<
@@ -1834,7 +1988,7 @@ async function handlePanoAPIGetBatchCommentsProtobuf<
   let response: GetBatchCommentsResponse;
 
   try {
-    request = GetBatchCommentsRequest.decode(data);
+    request = GetBatchCommentsRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1855,7 +2009,7 @@ async function handlePanoAPIGetBatchCommentsProtobuf<
     response = await service.GetBatchComments(ctx, request!);
   }
 
-  return Buffer.from(GetBatchCommentsResponse.encode(response).finish());
+  return Buffer.from(GetBatchCommentsResponse.toBinary(response));
 }
 
 async function handlePanoAPIGetCommentsProtobuf<
@@ -1870,7 +2024,7 @@ async function handlePanoAPIGetCommentsProtobuf<
   let response: GetCommentsResponse;
 
   try {
-    request = GetCommentsRequest.decode(data);
+    request = GetCommentsRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1891,7 +2045,7 @@ async function handlePanoAPIGetCommentsProtobuf<
     response = await service.GetComments(ctx, request!);
   }
 
-  return Buffer.from(GetCommentsResponse.encode(response).finish());
+  return Buffer.from(GetCommentsResponse.toBinary(response));
 }
 
 async function handlePanoAPICreateCommentProtobuf<
@@ -1906,7 +2060,7 @@ async function handlePanoAPICreateCommentProtobuf<
   let response: CreateCommentResponse;
 
   try {
-    request = CreateCommentRequest.decode(data);
+    request = CreateCommentRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1927,7 +2081,7 @@ async function handlePanoAPICreateCommentProtobuf<
     response = await service.CreateComment(ctx, request!);
   }
 
-  return Buffer.from(CreateCommentResponse.encode(response).finish());
+  return Buffer.from(CreateCommentResponse.toBinary(response));
 }
 
 async function handlePanoAPIUpdateCommentProtobuf<
@@ -1942,7 +2096,7 @@ async function handlePanoAPIUpdateCommentProtobuf<
   let response: UpdateCommentResponse;
 
   try {
-    request = UpdateCommentRequest.decode(data);
+    request = UpdateCommentRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1963,7 +2117,7 @@ async function handlePanoAPIUpdateCommentProtobuf<
     response = await service.UpdateComment(ctx, request!);
   }
 
-  return Buffer.from(UpdateCommentResponse.encode(response).finish());
+  return Buffer.from(UpdateCommentResponse.toBinary(response));
 }
 
 async function handlePanoAPIDeleteCommentProtobuf<
@@ -1978,7 +2132,7 @@ async function handlePanoAPIDeleteCommentProtobuf<
   let response: DeleteCommentResponse;
 
   try {
-    request = DeleteCommentRequest.decode(data);
+    request = DeleteCommentRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -1999,7 +2153,7 @@ async function handlePanoAPIDeleteCommentProtobuf<
     response = await service.DeleteComment(ctx, request!);
   }
 
-  return Buffer.from(DeleteCommentResponse.encode(response).finish());
+  return Buffer.from(DeleteCommentResponse.toBinary(response));
 }
 
 async function handlePanoAPIGetUpvotesProtobuf<
@@ -2014,7 +2168,7 @@ async function handlePanoAPIGetUpvotesProtobuf<
   let response: GetUpvotesResponse;
 
   try {
-    request = GetUpvotesRequest.decode(data);
+    request = GetUpvotesRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -2035,7 +2189,7 @@ async function handlePanoAPIGetUpvotesProtobuf<
     response = await service.GetUpvotes(ctx, request!);
   }
 
-  return Buffer.from(GetUpvotesResponse.encode(response).finish());
+  return Buffer.from(GetUpvotesResponse.toBinary(response));
 }
 
 async function handlePanoAPICreateUpvoteProtobuf<
@@ -2050,7 +2204,7 @@ async function handlePanoAPICreateUpvoteProtobuf<
   let response: CreateUpvoteResponse;
 
   try {
-    request = CreateUpvoteRequest.decode(data);
+    request = CreateUpvoteRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -2071,7 +2225,7 @@ async function handlePanoAPICreateUpvoteProtobuf<
     response = await service.CreateUpvote(ctx, request!);
   }
 
-  return Buffer.from(CreateUpvoteResponse.encode(response).finish());
+  return Buffer.from(CreateUpvoteResponse.toBinary(response));
 }
 
 async function handlePanoAPIDeleteUpvoteProtobuf<
@@ -2086,7 +2240,7 @@ async function handlePanoAPIDeleteUpvoteProtobuf<
   let response: DeleteUpvoteResponse;
 
   try {
-    request = DeleteUpvoteRequest.decode(data);
+    request = DeleteUpvoteRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -2107,7 +2261,7 @@ async function handlePanoAPIDeleteUpvoteProtobuf<
     response = await service.DeleteUpvote(ctx, request!);
   }
 
-  return Buffer.from(DeleteUpvoteResponse.encode(response).finish());
+  return Buffer.from(DeleteUpvoteResponse.toBinary(response));
 }
 
 async function handlePanoAPIIsUpvotedProtobuf<
@@ -2122,7 +2276,7 @@ async function handlePanoAPIIsUpvotedProtobuf<
   let response: IsUpvotedResponse;
 
   try {
-    request = IsUpvotedRequest.decode(data);
+    request = IsUpvotedRequest.fromBinary(data);
   } catch (e) {
     if (e instanceof Error) {
       const msg = "the protobuf request could not be decoded";
@@ -2143,5 +2297,5 @@ async function handlePanoAPIIsUpvotedProtobuf<
     response = await service.IsUpvoted(ctx, request!);
   }
 
-  return Buffer.from(IsUpvotedResponse.encode(response).finish());
+  return Buffer.from(IsUpvotedResponse.toBinary(response));
 }

@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import Post from "./handlers/Post";
-import {createPanoAPIServer, PanoAPITwirp} from "../protos/service.twirp";
+import {createPanoAPIServer, PanoAPITwirp} from "./protos/service.twirp";
 
 dotenv.config();
 
