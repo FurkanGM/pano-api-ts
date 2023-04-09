@@ -86,7 +86,7 @@ const DeleteUpvote = async (ctx: TwirpContext, request: DeleteUpvoteRequest): Pr
 }
 
 const IsUpvoted = async (ctx: TwirpContext, request: IsUpvotedRequest): Promise<IsUpvotedResponse> => {
-    let isUpvoted = false
+    let isUpvoted: boolean
 
     if (request.entityType === 'post') {
         const upvotes = await prisma.upvote.findMany({
