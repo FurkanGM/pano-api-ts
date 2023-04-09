@@ -7,7 +7,8 @@ import {PrismaClient} from '@prisma/client'
 dotenv.config();
 
 const server = createPanoAPIServer({
-    ...Post
+    ...Post,
+    ...Comment,
 } as PanoAPITwirp);
 
 const app = express();
