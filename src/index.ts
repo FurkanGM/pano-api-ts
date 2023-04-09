@@ -9,9 +9,9 @@ import Comment from "./handlers/Comment"
 dotenv.config()
 
 const server = createPanoAPIServer({
-	...Post,
-	...Comment,
-	...Upvote,
+  ...Post,
+  ...Comment,
+  ...Upvote,
 } as PanoAPITwirp)
 
 const app = express()
@@ -20,7 +20,7 @@ const prisma = new PrismaClient()
 app.post(server.matchingPath(), server.httpHandler())
 
 app.listen(3000, () => {
-	console.log(`Server is running at :3000`)
+  console.log(`Server is running at :3000`)
 })
 
 export { prisma }

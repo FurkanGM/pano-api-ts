@@ -19,121 +19,121 @@ import { StringValue } from "./google/protobuf/wrappers"
  * @generated from protobuf message kampus.panoapi.Post
  */
 export interface Post {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string
-	/**
-	 * @generated from protobuf field: string title = 2;
-	 */
-	title: string
-	/**
-	 * @generated from protobuf field: string url = 3;
-	 */
-	url: string
-	/**
-	 * @generated from protobuf field: string content = 4;
-	 */
-	content: string
-	/**
-	 * @generated from protobuf field: string slug = 5;
-	 */
-	slug: string
-	/**
-	 * @generated from protobuf field: string user_id = 6;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string
+  /**
+   * @generated from protobuf field: string title = 2;
+   */
+  title: string
+  /**
+   * @generated from protobuf field: string url = 3;
+   */
+  url: string
+  /**
+   * @generated from protobuf field: string content = 4;
+   */
+  content: string
+  /**
+   * @generated from protobuf field: string slug = 5;
+   */
+  slug: string
+  /**
+   * @generated from protobuf field: string user_id = 6;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetBatchPostsRequest
  */
 export interface GetBatchPostsRequest {
-	/**
-	 * @generated from protobuf field: repeated string ids = 1;
-	 */
-	ids: string[]
+  /**
+   * @generated from protobuf field: repeated string ids = 1;
+   */
+  ids: string[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetBatchPostsResponse
  */
 export interface GetBatchPostsResponse {
-	/**
-	 * @generated from protobuf field: repeated kampus.panoapi.Post posts = 1;
-	 */
-	posts: Post[]
+  /**
+   * @generated from protobuf field: repeated kampus.panoapi.Post posts = 1;
+   */
+  posts: Post[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetPostsRequest
  */
 export interface GetPostsRequest {
-	/**
-	 * @generated from protobuf field: int32 limit = 1;
-	 */
-	limit: number
-	/**
-	 * @generated from protobuf field: int32 offset = 2;
-	 */
-	offset: number
+  /**
+   * @generated from protobuf field: int32 limit = 1;
+   */
+  limit: number
+  /**
+   * @generated from protobuf field: int32 offset = 2;
+   */
+  offset: number
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetPostsResponse
  */
 export interface GetPostsResponse {
-	/**
-	 * @generated from protobuf field: repeated kampus.panoapi.Post posts = 1;
-	 */
-	posts: Post[]
+  /**
+   * @generated from protobuf field: repeated kampus.panoapi.Post posts = 1;
+   */
+  posts: Post[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreatePostRequest
  */
 export interface CreatePostRequest {
-	/**
-	 * @generated from protobuf field: string title = 1;
-	 */
-	title: string
-	/**
-	 * @generated from protobuf field: string url = 2;
-	 */
-	url: string
-	/**
-	 * @generated from protobuf field: string content = 3;
-	 */
-	content: string
-	/**
-	 * @generated from protobuf field: string user_id = 4;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string title = 1;
+   */
+  title: string
+  /**
+   * @generated from protobuf field: string url = 2;
+   */
+  url: string
+  /**
+   * @generated from protobuf field: string content = 3;
+   */
+  content: string
+  /**
+   * @generated from protobuf field: string user_id = 4;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreatePostResponse
  */
 export interface CreatePostResponse {
-	/**
-	 * @generated from protobuf field: kampus.panoapi.Post post = 1;
-	 */
-	post?: Post
+  /**
+   * @generated from protobuf field: kampus.panoapi.Post post = 1;
+   */
+  post?: Post
 }
 /**
  * @generated from protobuf message kampus.panoapi.UpdatePostRequest
  */
 export interface UpdatePostRequest {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string
-	/**
-	 * @generated from protobuf field: google.protobuf.StringValue title = 2;
-	 */
-	title?: StringValue
-	/**
-	 * @generated from protobuf field: google.protobuf.StringValue url = 3;
-	 */
-	url?: StringValue
-	/**
-	 * @generated from protobuf field: google.protobuf.StringValue content = 4;
-	 */
-	content?: StringValue
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string
+  /**
+   * @generated from protobuf field: google.protobuf.StringValue title = 2;
+   */
+  title?: StringValue
+  /**
+   * @generated from protobuf field: google.protobuf.StringValue url = 3;
+   */
+  url?: StringValue
+  /**
+   * @generated from protobuf field: google.protobuf.StringValue content = 4;
+   */
+  content?: StringValue
 }
 /**
  * @generated from protobuf message kampus.panoapi.UpdatePostResponse
@@ -143,10 +143,10 @@ export interface UpdatePostResponse {}
  * @generated from protobuf message kampus.panoapi.DeletePostRequest
  */
 export interface DeletePostRequest {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.DeletePostResponse
@@ -158,136 +158,136 @@ export interface DeletePostResponse {}
  * @generated from protobuf message kampus.panoapi.Comment
  */
 export interface Comment {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string
-	/**
-	 * @generated from protobuf field: string content = 2;
-	 */
-	content: string
-	/**
-	 * @generated from protobuf field: string user_id = 3;
-	 */
-	userId: string
-	/**
-	 * @generated from protobuf field: string post_id = 4;
-	 */
-	postId: string
-	/**
-	 * @generated from protobuf field: string parent_id = 5;
-	 */
-	parentId: string
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string
+  /**
+   * @generated from protobuf field: string content = 2;
+   */
+  content: string
+  /**
+   * @generated from protobuf field: string user_id = 3;
+   */
+  userId: string
+  /**
+   * @generated from protobuf field: string post_id = 4;
+   */
+  postId: string
+  /**
+   * @generated from protobuf field: string parent_id = 5;
+   */
+  parentId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetBatchCommentsRequest
  */
 export interface GetBatchCommentsRequest {
-	/**
-	 * @generated from protobuf field: repeated string ids = 1;
-	 */
-	ids: string[] // required
+  /**
+   * @generated from protobuf field: repeated string ids = 1;
+   */
+  ids: string[] // required
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetBatchCommentsResponse
  */
 export interface GetBatchCommentsResponse {
-	/**
-	 * @generated from protobuf field: repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];
-	 */
-	comments: Comment[]
+  /**
+   * @generated from protobuf field: repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];
+   */
+  comments: Comment[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetCommentsRequest
  */
 export interface GetCommentsRequest {
-	/**
-	 * @generated from protobuf field: int32 limit = 1;
-	 */
-	limit: number // default( 10 )
-	/**
-	 * @generated from protobuf field: int32 offset = 2;
-	 */
-	offset: number // default( 0 )
+  /**
+   * @generated from protobuf field: int32 limit = 1;
+   */
+  limit: number // default( 10 )
+  /**
+   * @generated from protobuf field: int32 offset = 2;
+   */
+  offset: number // default( 0 )
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetCommentsResponse
  */
 export interface GetCommentsResponse {
-	/**
-	 * @generated from protobuf field: repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];
-	 */
-	comments: Comment[]
+  /**
+   * @generated from protobuf field: repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];
+   */
+  comments: Comment[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreateCommentRequest
  */
 export interface CreateCommentRequest {
-	/**
-	 * @generated from protobuf field: string content = 1;
-	 */
-	content: string // required
-	/**
-	 * @generated from protobuf field: string user_id = 2;
-	 */
-	userId: string // required
-	/**
-	 * @generated from protobuf field: string post_id = 3;
-	 */
-	postId: string // required
-	/**
-	 * @generated from protobuf field: google.protobuf.StringValue parent_id = 4;
-	 */
-	parentId?: StringValue
+  /**
+   * @generated from protobuf field: string content = 1;
+   */
+  content: string // required
+  /**
+   * @generated from protobuf field: string user_id = 2;
+   */
+  userId: string // required
+  /**
+   * @generated from protobuf field: string post_id = 3;
+   */
+  postId: string // required
+  /**
+   * @generated from protobuf field: google.protobuf.StringValue parent_id = 4;
+   */
+  parentId?: StringValue
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreateCommentResponse
  */
 export interface CreateCommentResponse {
-	/**
-	 * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
-	 */
-	comment?: Comment
+  /**
+   * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
+   */
+  comment?: Comment
 }
 /**
  * @generated from protobuf message kampus.panoapi.UpdateCommentRequest
  */
 export interface UpdateCommentRequest {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string // required
-	/**
-	 * @generated from protobuf field: string content = 2;
-	 */
-	content: string // required
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string // required
+  /**
+   * @generated from protobuf field: string content = 2;
+   */
+  content: string // required
 }
 /**
  * @generated from protobuf message kampus.panoapi.UpdateCommentResponse
  */
 export interface UpdateCommentResponse {
-	/**
-	 * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
-	 */
-	comment?: Comment
+  /**
+   * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
+   */
+  comment?: Comment
 }
 /**
  * @generated from protobuf message kampus.panoapi.DeleteCommentRequest
  */
 export interface DeleteCommentRequest {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string // required
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string // required
 }
 /**
  * @generated from protobuf message kampus.panoapi.DeleteCommentResponse
  */
 export interface DeleteCommentResponse {
-	/**
-	 * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
-	 */
-	comment?: Comment
+  /**
+   * @generated from protobuf field: kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];
+   */
+  comment?: Comment
 }
 /**
  * Upvote Start
@@ -295,87 +295,87 @@ export interface DeleteCommentResponse {
  * @generated from protobuf message kampus.panoapi.Upvote
  */
 export interface Upvote {
-	/**
-	 * @generated from protobuf field: string id = 1;
-	 */
-	id: string
-	/**
-	 * @generated from protobuf field: string entity_id = 2;
-	 */
-	entityId: string
-	/**
-	 * @generated from protobuf field: string entity_type = 3;
-	 */
-	entityType: string
-	/**
-	 * @generated from protobuf field: string user_id = 4;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string id = 1;
+   */
+  id: string
+  /**
+   * @generated from protobuf field: string entity_id = 2;
+   */
+  entityId: string
+  /**
+   * @generated from protobuf field: string entity_type = 3;
+   */
+  entityType: string
+  /**
+   * @generated from protobuf field: string user_id = 4;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetUpvotesRequest
  */
 export interface GetUpvotesRequest {
-	/**
-	 * @generated from protobuf field: string entity_id = 1;
-	 */
-	entityId: string
-	/**
-	 * @generated from protobuf field: string entity_type = 2;
-	 */
-	entityType: string
+  /**
+   * @generated from protobuf field: string entity_id = 1;
+   */
+  entityId: string
+  /**
+   * @generated from protobuf field: string entity_type = 2;
+   */
+  entityType: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.GetUpvotesResponse
  */
 export interface GetUpvotesResponse {
-	/**
-	 * @generated from protobuf field: repeated kampus.panoapi.Upvote upvotes = 1;
-	 */
-	upvotes: Upvote[]
+  /**
+   * @generated from protobuf field: repeated kampus.panoapi.Upvote upvotes = 1;
+   */
+  upvotes: Upvote[]
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreateUpvoteRequest
  */
 export interface CreateUpvoteRequest {
-	/**
-	 * @generated from protobuf field: string entity_id = 1;
-	 */
-	entityId: string
-	/**
-	 * @generated from protobuf field: string entity_type = 2;
-	 */
-	entityType: string
-	/**
-	 * @generated from protobuf field: string user_id = 3;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string entity_id = 1;
+   */
+  entityId: string
+  /**
+   * @generated from protobuf field: string entity_type = 2;
+   */
+  entityType: string
+  /**
+   * @generated from protobuf field: string user_id = 3;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.CreateUpvoteResponse
  */
 export interface CreateUpvoteResponse {
-	/**
-	 * @generated from protobuf field: kampus.panoapi.Upvote upvote = 1;
-	 */
-	upvote?: Upvote
+  /**
+   * @generated from protobuf field: kampus.panoapi.Upvote upvote = 1;
+   */
+  upvote?: Upvote
 }
 /**
  * @generated from protobuf message kampus.panoapi.DeleteUpvoteRequest
  */
 export interface DeleteUpvoteRequest {
-	/**
-	 * @generated from protobuf field: string entity_id = 1;
-	 */
-	entityId: string
-	/**
-	 * @generated from protobuf field: string entity_type = 2;
-	 */
-	entityType: string
-	/**
-	 * @generated from protobuf field: string user_id = 3;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string entity_id = 1;
+   */
+  entityId: string
+  /**
+   * @generated from protobuf field: string entity_type = 2;
+   */
+  entityType: string
+  /**
+   * @generated from protobuf field: string user_id = 3;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.DeleteUpvoteResponse
@@ -385,152 +385,151 @@ export interface DeleteUpvoteResponse {}
  * @generated from protobuf message kampus.panoapi.IsUpvotedRequest
  */
 export interface IsUpvotedRequest {
-	/**
-	 * @generated from protobuf field: string entity_id = 1;
-	 */
-	entityId: string
-	/**
-	 * @generated from protobuf field: string entity_type = 2;
-	 */
-	entityType: string
-	/**
-	 * @generated from protobuf field: string user_id = 3;
-	 */
-	userId: string
+  /**
+   * @generated from protobuf field: string entity_id = 1;
+   */
+  entityId: string
+  /**
+   * @generated from protobuf field: string entity_type = 2;
+   */
+  entityType: string
+  /**
+   * @generated from protobuf field: string user_id = 3;
+   */
+  userId: string
 }
 /**
  * @generated from protobuf message kampus.panoapi.IsUpvotedResponse
  */
 export interface IsUpvotedResponse {
-	/**
-	 * @generated from protobuf field: bool is_upvoted = 1;
-	 */
-	isUpvoted: boolean
+  /**
+   * @generated from protobuf field: bool is_upvoted = 1;
+   */
+  isUpvoted: boolean
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class Post$Type extends MessageType<Post> {
-	constructor() {
-		super("kampus.panoapi.Post", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 2,
-				name: "title",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{ no: 3, name: "url", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 4,
-				name: "content",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{ no: 5, name: "slug", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 6,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<Post>): Post {
-		const message = {
-			id: "",
-			title: "",
-			url: "",
-			content: "",
-			slug: "",
-			userId: "",
-		}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<Post>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: Post
-	): Post {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				case /* string title */ 2:
-					message.title = reader.string()
-					break
-				case /* string url */ 3:
-					message.url = reader.string()
-					break
-				case /* string content */ 4:
-					message.content = reader.string()
-					break
-				case /* string slug */ 5:
-					message.slug = reader.string()
-					break
-				case /* string user_id */ 6:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: Post,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		/* string title = 2; */
-		if (message.title !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.title)
-		/* string url = 3; */
-		if (message.url !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.url)
-		/* string content = 4; */
-		if (message.content !== "")
-			writer.tag(4, WireType.LengthDelimited).string(message.content)
-		/* string slug = 5; */
-		if (message.slug !== "")
-			writer.tag(5, WireType.LengthDelimited).string(message.slug)
-		/* string user_id = 6; */
-		if (message.userId !== "")
-			writer.tag(6, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.Post", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 2,
+        name: "title",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      { no: 3, name: "url", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 4,
+        name: "content",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      { no: 5, name: "slug", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 6,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<Post>): Post {
+    const message = {
+      id: "",
+      title: "",
+      url: "",
+      content: "",
+      slug: "",
+      userId: "",
+    }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined) reflectionMergePartial<Post>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: Post
+  ): Post {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        case /* string title */ 2:
+          message.title = reader.string()
+          break
+        case /* string url */ 3:
+          message.url = reader.string()
+          break
+        case /* string content */ 4:
+          message.content = reader.string()
+          break
+        case /* string slug */ 5:
+          message.slug = reader.string()
+          break
+        case /* string user_id */ 6:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: Post,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    /* string title = 2; */
+    if (message.title !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.title)
+    /* string url = 3; */
+    if (message.url !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.url)
+    /* string content = 4; */
+    if (message.content !== "")
+      writer.tag(4, WireType.LengthDelimited).string(message.content)
+    /* string slug = 5; */
+    if (message.slug !== "")
+      writer.tag(5, WireType.LengthDelimited).string(message.slug)
+    /* string user_id = 6; */
+    if (message.userId !== "")
+      writer.tag(6, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.Post
@@ -538,77 +537,77 @@ class Post$Type extends MessageType<Post> {
 export const Post = new Post$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBatchPostsRequest$Type extends MessageType<GetBatchPostsRequest> {
-	constructor() {
-		super("kampus.panoapi.GetBatchPostsRequest", [
-			{
-				no: 1,
-				name: "ids",
-				kind: "scalar",
-				repeat: 2 /*RepeatType.UNPACKED*/,
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetBatchPostsRequest>): GetBatchPostsRequest {
-		const message = { ids: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetBatchPostsRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetBatchPostsRequest
-	): GetBatchPostsRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated string ids */ 1:
-					message.ids.push(reader.string())
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetBatchPostsRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated string ids = 1; */
-		for (let i = 0; i < message.ids.length; i++)
-			writer.tag(1, WireType.LengthDelimited).string(message.ids[i])
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetBatchPostsRequest", [
+      {
+        no: 1,
+        name: "ids",
+        kind: "scalar",
+        repeat: 2 /*RepeatType.UNPACKED*/,
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetBatchPostsRequest>): GetBatchPostsRequest {
+    const message = { ids: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetBatchPostsRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetBatchPostsRequest
+  ): GetBatchPostsRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated string ids */ 1:
+          message.ids.push(reader.string())
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetBatchPostsRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated string ids = 1; */
+    for (let i = 0; i < message.ids.length; i++)
+      writer.tag(1, WireType.LengthDelimited).string(message.ids[i])
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetBatchPostsRequest
@@ -616,89 +615,83 @@ class GetBatchPostsRequest$Type extends MessageType<GetBatchPostsRequest> {
 export const GetBatchPostsRequest = new GetBatchPostsRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBatchPostsResponse$Type extends MessageType<GetBatchPostsResponse> {
-	constructor() {
-		super("kampus.panoapi.GetBatchPostsResponse", [
-			{
-				no: 1,
-				name: "posts",
-				kind: "message",
-				repeat: 1 /*RepeatType.PACKED*/,
-				T: () => Post,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<GetBatchPostsResponse>
-	): GetBatchPostsResponse {
-		const message = { posts: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetBatchPostsResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetBatchPostsResponse
-	): GetBatchPostsResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated kampus.panoapi.Post posts */ 1:
-					message.posts.push(
-						Post.internalBinaryRead(
-							reader,
-							reader.uint32(),
-							options
-						)
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetBatchPostsResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated kampus.panoapi.Post posts = 1; */
-		for (let i = 0; i < message.posts.length; i++)
-			Post.internalBinaryWrite(
-				message.posts[i],
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetBatchPostsResponse", [
+      {
+        no: 1,
+        name: "posts",
+        kind: "message",
+        repeat: 1 /*RepeatType.PACKED*/,
+        T: () => Post,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetBatchPostsResponse>): GetBatchPostsResponse {
+    const message = { posts: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetBatchPostsResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetBatchPostsResponse
+  ): GetBatchPostsResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated kampus.panoapi.Post posts */ 1:
+          message.posts.push(
+            Post.internalBinaryRead(reader, reader.uint32(), options)
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetBatchPostsResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated kampus.panoapi.Post posts = 1; */
+    for (let i = 0; i < message.posts.length; i++)
+      Post.internalBinaryWrite(
+        message.posts[i],
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetBatchPostsResponse
@@ -706,83 +699,82 @@ class GetBatchPostsResponse$Type extends MessageType<GetBatchPostsResponse> {
 export const GetBatchPostsResponse = new GetBatchPostsResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetPostsRequest$Type extends MessageType<GetPostsRequest> {
-	constructor() {
-		super("kampus.panoapi.GetPostsRequest", [
-			{ no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-			{
-				no: 2,
-				name: "offset",
-				kind: "scalar",
-				T: 5 /*ScalarType.INT32*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetPostsRequest>): GetPostsRequest {
-		const message = { limit: 0, offset: 0 }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetPostsRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetPostsRequest
-	): GetPostsRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* int32 limit */ 1:
-					message.limit = reader.int32()
-					break
-				case /* int32 offset */ 2:
-					message.offset = reader.int32()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetPostsRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* int32 limit = 1; */
-		if (message.limit !== 0)
-			writer.tag(1, WireType.Varint).int32(message.limit)
-		/* int32 offset = 2; */
-		if (message.offset !== 0)
-			writer.tag(2, WireType.Varint).int32(message.offset)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetPostsRequest", [
+      { no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+      {
+        no: 2,
+        name: "offset",
+        kind: "scalar",
+        T: 5 /*ScalarType.INT32*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetPostsRequest>): GetPostsRequest {
+    const message = { limit: 0, offset: 0 }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetPostsRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetPostsRequest
+  ): GetPostsRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* int32 limit */ 1:
+          message.limit = reader.int32()
+          break
+        case /* int32 offset */ 2:
+          message.offset = reader.int32()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetPostsRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* int32 limit = 1; */
+    if (message.limit !== 0) writer.tag(1, WireType.Varint).int32(message.limit)
+    /* int32 offset = 2; */
+    if (message.offset !== 0)
+      writer.tag(2, WireType.Varint).int32(message.offset)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetPostsRequest
@@ -790,87 +782,83 @@ class GetPostsRequest$Type extends MessageType<GetPostsRequest> {
 export const GetPostsRequest = new GetPostsRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetPostsResponse$Type extends MessageType<GetPostsResponse> {
-	constructor() {
-		super("kampus.panoapi.GetPostsResponse", [
-			{
-				no: 1,
-				name: "posts",
-				kind: "message",
-				repeat: 1 /*RepeatType.PACKED*/,
-				T: () => Post,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetPostsResponse>): GetPostsResponse {
-		const message = { posts: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetPostsResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetPostsResponse
-	): GetPostsResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated kampus.panoapi.Post posts */ 1:
-					message.posts.push(
-						Post.internalBinaryRead(
-							reader,
-							reader.uint32(),
-							options
-						)
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetPostsResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated kampus.panoapi.Post posts = 1; */
-		for (let i = 0; i < message.posts.length; i++)
-			Post.internalBinaryWrite(
-				message.posts[i],
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetPostsResponse", [
+      {
+        no: 1,
+        name: "posts",
+        kind: "message",
+        repeat: 1 /*RepeatType.PACKED*/,
+        T: () => Post,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetPostsResponse>): GetPostsResponse {
+    const message = { posts: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetPostsResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetPostsResponse
+  ): GetPostsResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated kampus.panoapi.Post posts */ 1:
+          message.posts.push(
+            Post.internalBinaryRead(reader, reader.uint32(), options)
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetPostsResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated kampus.panoapi.Post posts = 1; */
+    for (let i = 0; i < message.posts.length; i++)
+      Post.internalBinaryWrite(
+        message.posts[i],
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetPostsResponse
@@ -878,107 +866,107 @@ class GetPostsResponse$Type extends MessageType<GetPostsResponse> {
 export const GetPostsResponse = new GetPostsResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreatePostRequest$Type extends MessageType<CreatePostRequest> {
-	constructor() {
-		super("kampus.panoapi.CreatePostRequest", [
-			{
-				no: 1,
-				name: "title",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{ no: 2, name: "url", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 3,
-				name: "content",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 4,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<CreatePostRequest>): CreatePostRequest {
-		const message = { title: "", url: "", content: "", userId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreatePostRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreatePostRequest
-	): CreatePostRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string title */ 1:
-					message.title = reader.string()
-					break
-				case /* string url */ 2:
-					message.url = reader.string()
-					break
-				case /* string content */ 3:
-					message.content = reader.string()
-					break
-				case /* string user_id */ 4:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreatePostRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string title = 1; */
-		if (message.title !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.title)
-		/* string url = 2; */
-		if (message.url !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.url)
-		/* string content = 3; */
-		if (message.content !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.content)
-		/* string user_id = 4; */
-		if (message.userId !== "")
-			writer.tag(4, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreatePostRequest", [
+      {
+        no: 1,
+        name: "title",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      { no: 2, name: "url", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 3,
+        name: "content",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 4,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<CreatePostRequest>): CreatePostRequest {
+    const message = { title: "", url: "", content: "", userId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreatePostRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreatePostRequest
+  ): CreatePostRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string title */ 1:
+          message.title = reader.string()
+          break
+        case /* string url */ 2:
+          message.url = reader.string()
+          break
+        case /* string content */ 3:
+          message.content = reader.string()
+          break
+        case /* string user_id */ 4:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreatePostRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string title = 1; */
+    if (message.title !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.title)
+    /* string url = 2; */
+    if (message.url !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.url)
+    /* string content = 3; */
+    if (message.content !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.content)
+    /* string user_id = 4; */
+    if (message.userId !== "")
+      writer.tag(4, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreatePostRequest
@@ -986,80 +974,80 @@ class CreatePostRequest$Type extends MessageType<CreatePostRequest> {
 export const CreatePostRequest = new CreatePostRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreatePostResponse$Type extends MessageType<CreatePostResponse> {
-	constructor() {
-		super("kampus.panoapi.CreatePostResponse", [
-			{ no: 1, name: "post", kind: "message", T: () => Post },
-		])
-	}
-	create(value?: PartialMessage<CreatePostResponse>): CreatePostResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreatePostResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreatePostResponse
-	): CreatePostResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* kampus.panoapi.Post post */ 1:
-					message.post = Post.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.post
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreatePostResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* kampus.panoapi.Post post = 1; */
-		if (message.post)
-			Post.internalBinaryWrite(
-				message.post,
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreatePostResponse", [
+      { no: 1, name: "post", kind: "message", T: () => Post },
+    ])
+  }
+  create(value?: PartialMessage<CreatePostResponse>): CreatePostResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreatePostResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreatePostResponse
+  ): CreatePostResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* kampus.panoapi.Post post */ 1:
+          message.post = Post.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.post
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreatePostResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* kampus.panoapi.Post post = 1; */
+    if (message.post)
+      Post.internalBinaryWrite(
+        message.post,
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreatePostResponse
@@ -1067,119 +1055,119 @@ class CreatePostResponse$Type extends MessageType<CreatePostResponse> {
 export const CreatePostResponse = new CreatePostResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdatePostRequest$Type extends MessageType<UpdatePostRequest> {
-	constructor() {
-		super("kampus.panoapi.UpdatePostRequest", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{ no: 2, name: "title", kind: "message", T: () => StringValue },
-			{ no: 3, name: "url", kind: "message", T: () => StringValue },
-			{ no: 4, name: "content", kind: "message", T: () => StringValue },
-		])
-	}
-	create(value?: PartialMessage<UpdatePostRequest>): UpdatePostRequest {
-		const message = { id: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<UpdatePostRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: UpdatePostRequest
-	): UpdatePostRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				case /* google.protobuf.StringValue title */ 2:
-					message.title = StringValue.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.title
-					)
-					break
-				case /* google.protobuf.StringValue url */ 3:
-					message.url = StringValue.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.url
-					)
-					break
-				case /* google.protobuf.StringValue content */ 4:
-					message.content = StringValue.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.content
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: UpdatePostRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		/* google.protobuf.StringValue title = 2; */
-		if (message.title)
-			StringValue.internalBinaryWrite(
-				message.title,
-				writer.tag(2, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		/* google.protobuf.StringValue url = 3; */
-		if (message.url)
-			StringValue.internalBinaryWrite(
-				message.url,
-				writer.tag(3, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		/* google.protobuf.StringValue content = 4; */
-		if (message.content)
-			StringValue.internalBinaryWrite(
-				message.content,
-				writer.tag(4, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.UpdatePostRequest", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      { no: 2, name: "title", kind: "message", T: () => StringValue },
+      { no: 3, name: "url", kind: "message", T: () => StringValue },
+      { no: 4, name: "content", kind: "message", T: () => StringValue },
+    ])
+  }
+  create(value?: PartialMessage<UpdatePostRequest>): UpdatePostRequest {
+    const message = { id: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<UpdatePostRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: UpdatePostRequest
+  ): UpdatePostRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        case /* google.protobuf.StringValue title */ 2:
+          message.title = StringValue.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.title
+          )
+          break
+        case /* google.protobuf.StringValue url */ 3:
+          message.url = StringValue.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.url
+          )
+          break
+        case /* google.protobuf.StringValue content */ 4:
+          message.content = StringValue.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.content
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: UpdatePostRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    /* google.protobuf.StringValue title = 2; */
+    if (message.title)
+      StringValue.internalBinaryWrite(
+        message.title,
+        writer.tag(2, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    /* google.protobuf.StringValue url = 3; */
+    if (message.url)
+      StringValue.internalBinaryWrite(
+        message.url,
+        writer.tag(3, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    /* google.protobuf.StringValue content = 4; */
+    if (message.content)
+      StringValue.internalBinaryWrite(
+        message.content,
+        writer.tag(4, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.UpdatePostRequest
@@ -1187,41 +1175,41 @@ class UpdatePostRequest$Type extends MessageType<UpdatePostRequest> {
 export const UpdatePostRequest = new UpdatePostRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdatePostResponse$Type extends MessageType<UpdatePostResponse> {
-	constructor() {
-		super("kampus.panoapi.UpdatePostResponse", [])
-	}
-	create(value?: PartialMessage<UpdatePostResponse>): UpdatePostResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<UpdatePostResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: UpdatePostResponse
-	): UpdatePostResponse {
-		return target ?? this.create()
-	}
-	internalBinaryWrite(
-		message: UpdatePostResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.UpdatePostResponse", [])
+  }
+  create(value?: PartialMessage<UpdatePostResponse>): UpdatePostResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<UpdatePostResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: UpdatePostResponse
+  ): UpdatePostResponse {
+    return target ?? this.create()
+  }
+  internalBinaryWrite(
+    message: UpdatePostResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.UpdatePostResponse
@@ -1229,71 +1217,71 @@ class UpdatePostResponse$Type extends MessageType<UpdatePostResponse> {
 export const UpdatePostResponse = new UpdatePostResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostRequest$Type extends MessageType<DeletePostRequest> {
-	constructor() {
-		super("kampus.panoapi.DeletePostRequest", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-		])
-	}
-	create(value?: PartialMessage<DeletePostRequest>): DeletePostRequest {
-		const message = { id: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeletePostRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeletePostRequest
-	): DeletePostRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: DeletePostRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeletePostRequest", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+    ])
+  }
+  create(value?: PartialMessage<DeletePostRequest>): DeletePostRequest {
+    const message = { id: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeletePostRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeletePostRequest
+  ): DeletePostRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: DeletePostRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeletePostRequest
@@ -1301,41 +1289,41 @@ class DeletePostRequest$Type extends MessageType<DeletePostRequest> {
 export const DeletePostRequest = new DeletePostRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostResponse$Type extends MessageType<DeletePostResponse> {
-	constructor() {
-		super("kampus.panoapi.DeletePostResponse", [])
-	}
-	create(value?: PartialMessage<DeletePostResponse>): DeletePostResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeletePostResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeletePostResponse
-	): DeletePostResponse {
-		return target ?? this.create()
-	}
-	internalBinaryWrite(
-		message: DeletePostResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeletePostResponse", [])
+  }
+  create(value?: PartialMessage<DeletePostResponse>): DeletePostResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeletePostResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeletePostResponse
+  ): DeletePostResponse {
+    return target ?? this.create()
+  }
+  internalBinaryWrite(
+    message: DeletePostResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeletePostResponse
@@ -1343,125 +1331,125 @@ class DeletePostResponse$Type extends MessageType<DeletePostResponse> {
 export const DeletePostResponse = new DeletePostResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class Comment$Type extends MessageType<Comment> {
-	constructor() {
-		super("kampus.panoapi.Comment", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 2,
-				name: "content",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 4,
-				name: "post_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 5,
-				name: "parent_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<Comment>): Comment {
-		const message = {
-			id: "",
-			content: "",
-			userId: "",
-			postId: "",
-			parentId: "",
-		}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<Comment>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: Comment
-	): Comment {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				case /* string content */ 2:
-					message.content = reader.string()
-					break
-				case /* string user_id */ 3:
-					message.userId = reader.string()
-					break
-				case /* string post_id */ 4:
-					message.postId = reader.string()
-					break
-				case /* string parent_id */ 5:
-					message.parentId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: Comment,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		/* string content = 2; */
-		if (message.content !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.content)
-		/* string user_id = 3; */
-		if (message.userId !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.userId)
-		/* string post_id = 4; */
-		if (message.postId !== "")
-			writer.tag(4, WireType.LengthDelimited).string(message.postId)
-		/* string parent_id = 5; */
-		if (message.parentId !== "")
-			writer.tag(5, WireType.LengthDelimited).string(message.parentId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.Comment", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 2,
+        name: "content",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 4,
+        name: "post_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 5,
+        name: "parent_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<Comment>): Comment {
+    const message = {
+      id: "",
+      content: "",
+      userId: "",
+      postId: "",
+      parentId: "",
+    }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<Comment>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: Comment
+  ): Comment {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        case /* string content */ 2:
+          message.content = reader.string()
+          break
+        case /* string user_id */ 3:
+          message.userId = reader.string()
+          break
+        case /* string post_id */ 4:
+          message.postId = reader.string()
+          break
+        case /* string parent_id */ 5:
+          message.parentId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: Comment,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    /* string content = 2; */
+    if (message.content !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.content)
+    /* string user_id = 3; */
+    if (message.userId !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.userId)
+    /* string post_id = 4; */
+    if (message.postId !== "")
+      writer.tag(4, WireType.LengthDelimited).string(message.postId)
+    /* string parent_id = 5; */
+    if (message.parentId !== "")
+      writer.tag(5, WireType.LengthDelimited).string(message.parentId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.Comment
@@ -1469,83 +1457,79 @@ class Comment$Type extends MessageType<Comment> {
 export const Comment = new Comment$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBatchCommentsRequest$Type extends MessageType<GetBatchCommentsRequest> {
-	constructor() {
-		super("kampus.panoapi.GetBatchCommentsRequest", [
-			{
-				no: 1,
-				name: "ids",
-				kind: "scalar",
-				repeat: 2 /*RepeatType.UNPACKED*/,
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<GetBatchCommentsRequest>
-	): GetBatchCommentsRequest {
-		const message = { ids: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetBatchCommentsRequest>(
-				this,
-				message,
-				value
-			)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetBatchCommentsRequest
-	): GetBatchCommentsRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated string ids */ 1:
-					message.ids.push(reader.string())
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetBatchCommentsRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated string ids = 1; */
-		for (let i = 0; i < message.ids.length; i++)
-			writer.tag(1, WireType.LengthDelimited).string(message.ids[i])
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetBatchCommentsRequest", [
+      {
+        no: 1,
+        name: "ids",
+        kind: "scalar",
+        repeat: 2 /*RepeatType.UNPACKED*/,
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(
+    value?: PartialMessage<GetBatchCommentsRequest>
+  ): GetBatchCommentsRequest {
+    const message = { ids: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetBatchCommentsRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetBatchCommentsRequest
+  ): GetBatchCommentsRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated string ids */ 1:
+          message.ids.push(reader.string())
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetBatchCommentsRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated string ids = 1; */
+    for (let i = 0; i < message.ids.length; i++)
+      writer.tag(1, WireType.LengthDelimited).string(message.ids[i])
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetBatchCommentsRequest
@@ -1553,94 +1537,86 @@ class GetBatchCommentsRequest$Type extends MessageType<GetBatchCommentsRequest> 
 export const GetBatchCommentsRequest = new GetBatchCommentsRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBatchCommentsResponse$Type extends MessageType<GetBatchCommentsResponse> {
-	constructor() {
-		super("kampus.panoapi.GetBatchCommentsResponse", [
-			{
-				no: 1,
-				name: "Comments",
-				kind: "message",
-				jsonName: "Comments",
-				repeat: 1 /*RepeatType.PACKED*/,
-				T: () => Comment,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<GetBatchCommentsResponse>
-	): GetBatchCommentsResponse {
-		const message = { comments: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetBatchCommentsResponse>(
-				this,
-				message,
-				value
-			)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetBatchCommentsResponse
-	): GetBatchCommentsResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
-					message.comments.push(
-						Comment.internalBinaryRead(
-							reader,
-							reader.uint32(),
-							options
-						)
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetBatchCommentsResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"]; */
-		for (let i = 0; i < message.comments.length; i++)
-			Comment.internalBinaryWrite(
-				message.comments[i],
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetBatchCommentsResponse", [
+      {
+        no: 1,
+        name: "Comments",
+        kind: "message",
+        jsonName: "Comments",
+        repeat: 1 /*RepeatType.PACKED*/,
+        T: () => Comment,
+      },
+    ])
+  }
+  create(
+    value?: PartialMessage<GetBatchCommentsResponse>
+  ): GetBatchCommentsResponse {
+    const message = { comments: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetBatchCommentsResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetBatchCommentsResponse
+  ): GetBatchCommentsResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
+          message.comments.push(
+            Comment.internalBinaryRead(reader, reader.uint32(), options)
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetBatchCommentsResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"]; */
+    for (let i = 0; i < message.comments.length; i++)
+      Comment.internalBinaryWrite(
+        message.comments[i],
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetBatchCommentsResponse
@@ -1648,83 +1624,82 @@ class GetBatchCommentsResponse$Type extends MessageType<GetBatchCommentsResponse
 export const GetBatchCommentsResponse = new GetBatchCommentsResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetCommentsRequest$Type extends MessageType<GetCommentsRequest> {
-	constructor() {
-		super("kampus.panoapi.GetCommentsRequest", [
-			{ no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-			{
-				no: 2,
-				name: "offset",
-				kind: "scalar",
-				T: 5 /*ScalarType.INT32*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetCommentsRequest>): GetCommentsRequest {
-		const message = { limit: 0, offset: 0 }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetCommentsRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetCommentsRequest
-	): GetCommentsRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* int32 limit */ 1:
-					message.limit = reader.int32()
-					break
-				case /* int32 offset */ 2:
-					message.offset = reader.int32()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetCommentsRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* int32 limit = 1; */
-		if (message.limit !== 0)
-			writer.tag(1, WireType.Varint).int32(message.limit)
-		/* int32 offset = 2; */
-		if (message.offset !== 0)
-			writer.tag(2, WireType.Varint).int32(message.offset)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetCommentsRequest", [
+      { no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+      {
+        no: 2,
+        name: "offset",
+        kind: "scalar",
+        T: 5 /*ScalarType.INT32*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetCommentsRequest>): GetCommentsRequest {
+    const message = { limit: 0, offset: 0 }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetCommentsRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetCommentsRequest
+  ): GetCommentsRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* int32 limit */ 1:
+          message.limit = reader.int32()
+          break
+        case /* int32 offset */ 2:
+          message.offset = reader.int32()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetCommentsRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* int32 limit = 1; */
+    if (message.limit !== 0) writer.tag(1, WireType.Varint).int32(message.limit)
+    /* int32 offset = 2; */
+    if (message.offset !== 0)
+      writer.tag(2, WireType.Varint).int32(message.offset)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetCommentsRequest
@@ -1732,88 +1707,84 @@ class GetCommentsRequest$Type extends MessageType<GetCommentsRequest> {
 export const GetCommentsRequest = new GetCommentsRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetCommentsResponse$Type extends MessageType<GetCommentsResponse> {
-	constructor() {
-		super("kampus.panoapi.GetCommentsResponse", [
-			{
-				no: 1,
-				name: "Comments",
-				kind: "message",
-				jsonName: "Comments",
-				repeat: 1 /*RepeatType.PACKED*/,
-				T: () => Comment,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetCommentsResponse>): GetCommentsResponse {
-		const message = { comments: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetCommentsResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetCommentsResponse
-	): GetCommentsResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
-					message.comments.push(
-						Comment.internalBinaryRead(
-							reader,
-							reader.uint32(),
-							options
-						)
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetCommentsResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"]; */
-		for (let i = 0; i < message.comments.length; i++)
-			Comment.internalBinaryWrite(
-				message.comments[i],
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetCommentsResponse", [
+      {
+        no: 1,
+        name: "Comments",
+        kind: "message",
+        jsonName: "Comments",
+        repeat: 1 /*RepeatType.PACKED*/,
+        T: () => Comment,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetCommentsResponse>): GetCommentsResponse {
+    const message = { comments: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetCommentsResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetCommentsResponse
+  ): GetCommentsResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
+          message.comments.push(
+            Comment.internalBinaryRead(reader, reader.uint32(), options)
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetCommentsResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"]; */
+    for (let i = 0; i < message.comments.length; i++)
+      Comment.internalBinaryWrite(
+        message.comments[i],
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetCommentsResponse
@@ -1821,116 +1792,116 @@ class GetCommentsResponse$Type extends MessageType<GetCommentsResponse> {
 export const GetCommentsResponse = new GetCommentsResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
-	constructor() {
-		super("kampus.panoapi.CreateCommentRequest", [
-			{
-				no: 1,
-				name: "content",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 2,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "post_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{ no: 4, name: "parent_id", kind: "message", T: () => StringValue },
-		])
-	}
-	create(value?: PartialMessage<CreateCommentRequest>): CreateCommentRequest {
-		const message = { content: "", userId: "", postId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreateCommentRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreateCommentRequest
-	): CreateCommentRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string content */ 1:
-					message.content = reader.string()
-					break
-				case /* string user_id */ 2:
-					message.userId = reader.string()
-					break
-				case /* string post_id */ 3:
-					message.postId = reader.string()
-					break
-				case /* google.protobuf.StringValue parent_id */ 4:
-					message.parentId = StringValue.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.parentId
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreateCommentRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string content = 1; */
-		if (message.content !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.content)
-		/* string user_id = 2; */
-		if (message.userId !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.userId)
-		/* string post_id = 3; */
-		if (message.postId !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.postId)
-		/* google.protobuf.StringValue parent_id = 4; */
-		if (message.parentId)
-			StringValue.internalBinaryWrite(
-				message.parentId,
-				writer.tag(4, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreateCommentRequest", [
+      {
+        no: 1,
+        name: "content",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 2,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "post_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      { no: 4, name: "parent_id", kind: "message", T: () => StringValue },
+    ])
+  }
+  create(value?: PartialMessage<CreateCommentRequest>): CreateCommentRequest {
+    const message = { content: "", userId: "", postId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreateCommentRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreateCommentRequest
+  ): CreateCommentRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string content */ 1:
+          message.content = reader.string()
+          break
+        case /* string user_id */ 2:
+          message.userId = reader.string()
+          break
+        case /* string post_id */ 3:
+          message.postId = reader.string()
+          break
+        case /* google.protobuf.StringValue parent_id */ 4:
+          message.parentId = StringValue.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.parentId
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreateCommentRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string content = 1; */
+    if (message.content !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.content)
+    /* string user_id = 2; */
+    if (message.userId !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.userId)
+    /* string post_id = 3; */
+    if (message.postId !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.postId)
+    /* google.protobuf.StringValue parent_id = 4; */
+    if (message.parentId)
+      StringValue.internalBinaryWrite(
+        message.parentId,
+        writer.tag(4, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreateCommentRequest
@@ -1938,88 +1909,86 @@ class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
 export const CreateCommentRequest = new CreateCommentRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateCommentResponse$Type extends MessageType<CreateCommentResponse> {
-	constructor() {
-		super("kampus.panoapi.CreateCommentResponse", [
-			{
-				no: 1,
-				name: "Comment",
-				kind: "message",
-				jsonName: "Comment",
-				T: () => Comment,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<CreateCommentResponse>
-	): CreateCommentResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreateCommentResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreateCommentResponse
-	): CreateCommentResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
-					message.comment = Comment.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.comment
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreateCommentResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
-		if (message.comment)
-			Comment.internalBinaryWrite(
-				message.comment,
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreateCommentResponse", [
+      {
+        no: 1,
+        name: "Comment",
+        kind: "message",
+        jsonName: "Comment",
+        T: () => Comment,
+      },
+    ])
+  }
+  create(value?: PartialMessage<CreateCommentResponse>): CreateCommentResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreateCommentResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreateCommentResponse
+  ): CreateCommentResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
+          message.comment = Comment.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.comment
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreateCommentResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
+    if (message.comment)
+      Comment.internalBinaryWrite(
+        message.comment,
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreateCommentResponse
@@ -2027,83 +1996,83 @@ class CreateCommentResponse$Type extends MessageType<CreateCommentResponse> {
 export const CreateCommentResponse = new CreateCommentResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdateCommentRequest$Type extends MessageType<UpdateCommentRequest> {
-	constructor() {
-		super("kampus.panoapi.UpdateCommentRequest", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 2,
-				name: "content",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<UpdateCommentRequest>): UpdateCommentRequest {
-		const message = { id: "", content: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<UpdateCommentRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: UpdateCommentRequest
-	): UpdateCommentRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				case /* string content */ 2:
-					message.content = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: UpdateCommentRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		/* string content = 2; */
-		if (message.content !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.content)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.UpdateCommentRequest", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 2,
+        name: "content",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<UpdateCommentRequest>): UpdateCommentRequest {
+    const message = { id: "", content: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<UpdateCommentRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: UpdateCommentRequest
+  ): UpdateCommentRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        case /* string content */ 2:
+          message.content = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: UpdateCommentRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    /* string content = 2; */
+    if (message.content !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.content)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.UpdateCommentRequest
@@ -2111,88 +2080,86 @@ class UpdateCommentRequest$Type extends MessageType<UpdateCommentRequest> {
 export const UpdateCommentRequest = new UpdateCommentRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdateCommentResponse$Type extends MessageType<UpdateCommentResponse> {
-	constructor() {
-		super("kampus.panoapi.UpdateCommentResponse", [
-			{
-				no: 1,
-				name: "Comment",
-				kind: "message",
-				jsonName: "Comment",
-				T: () => Comment,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<UpdateCommentResponse>
-	): UpdateCommentResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<UpdateCommentResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: UpdateCommentResponse
-	): UpdateCommentResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
-					message.comment = Comment.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.comment
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: UpdateCommentResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
-		if (message.comment)
-			Comment.internalBinaryWrite(
-				message.comment,
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.UpdateCommentResponse", [
+      {
+        no: 1,
+        name: "Comment",
+        kind: "message",
+        jsonName: "Comment",
+        T: () => Comment,
+      },
+    ])
+  }
+  create(value?: PartialMessage<UpdateCommentResponse>): UpdateCommentResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<UpdateCommentResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: UpdateCommentResponse
+  ): UpdateCommentResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
+          message.comment = Comment.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.comment
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: UpdateCommentResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
+    if (message.comment)
+      Comment.internalBinaryWrite(
+        message.comment,
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.UpdateCommentResponse
@@ -2200,71 +2167,71 @@ class UpdateCommentResponse$Type extends MessageType<UpdateCommentResponse> {
 export const UpdateCommentResponse = new UpdateCommentResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentRequest$Type extends MessageType<DeleteCommentRequest> {
-	constructor() {
-		super("kampus.panoapi.DeleteCommentRequest", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-		])
-	}
-	create(value?: PartialMessage<DeleteCommentRequest>): DeleteCommentRequest {
-		const message = { id: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeleteCommentRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeleteCommentRequest
-	): DeleteCommentRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: DeleteCommentRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeleteCommentRequest", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+    ])
+  }
+  create(value?: PartialMessage<DeleteCommentRequest>): DeleteCommentRequest {
+    const message = { id: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeleteCommentRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeleteCommentRequest
+  ): DeleteCommentRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: DeleteCommentRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeleteCommentRequest
@@ -2272,88 +2239,86 @@ class DeleteCommentRequest$Type extends MessageType<DeleteCommentRequest> {
 export const DeleteCommentRequest = new DeleteCommentRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentResponse$Type extends MessageType<DeleteCommentResponse> {
-	constructor() {
-		super("kampus.panoapi.DeleteCommentResponse", [
-			{
-				no: 1,
-				name: "Comment",
-				kind: "message",
-				jsonName: "Comment",
-				T: () => Comment,
-			},
-		])
-	}
-	create(
-		value?: PartialMessage<DeleteCommentResponse>
-	): DeleteCommentResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeleteCommentResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeleteCommentResponse
-	): DeleteCommentResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
-					message.comment = Comment.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.comment
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: DeleteCommentResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
-		if (message.comment)
-			Comment.internalBinaryWrite(
-				message.comment,
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeleteCommentResponse", [
+      {
+        no: 1,
+        name: "Comment",
+        kind: "message",
+        jsonName: "Comment",
+        T: () => Comment,
+      },
+    ])
+  }
+  create(value?: PartialMessage<DeleteCommentResponse>): DeleteCommentResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeleteCommentResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeleteCommentResponse
+  ): DeleteCommentResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"];*/ 1:
+          message.comment = Comment.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.comment
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: DeleteCommentResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* kampus.panoapi.Comment Comment = 1 [json_name = "Comment"]; */
+    if (message.comment)
+      Comment.internalBinaryWrite(
+        message.comment,
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeleteCommentResponse
@@ -2361,107 +2326,107 @@ class DeleteCommentResponse$Type extends MessageType<DeleteCommentResponse> {
 export const DeleteCommentResponse = new DeleteCommentResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class Upvote$Type extends MessageType<Upvote> {
-	constructor() {
-		super("kampus.panoapi.Upvote", [
-			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-			{
-				no: 2,
-				name: "entity_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "entity_type",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 4,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<Upvote>): Upvote {
-		const message = { id: "", entityId: "", entityType: "", userId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<Upvote>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: Upvote
-	): Upvote {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string id */ 1:
-					message.id = reader.string()
-					break
-				case /* string entity_id */ 2:
-					message.entityId = reader.string()
-					break
-				case /* string entity_type */ 3:
-					message.entityType = reader.string()
-					break
-				case /* string user_id */ 4:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: Upvote,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string id = 1; */
-		if (message.id !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.id)
-		/* string entity_id = 2; */
-		if (message.entityId !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.entityId)
-		/* string entity_type = 3; */
-		if (message.entityType !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.entityType)
-		/* string user_id = 4; */
-		if (message.userId !== "")
-			writer.tag(4, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.Upvote", [
+      { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+      {
+        no: 2,
+        name: "entity_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "entity_type",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 4,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<Upvote>): Upvote {
+    const message = { id: "", entityId: "", entityType: "", userId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<Upvote>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: Upvote
+  ): Upvote {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string id */ 1:
+          message.id = reader.string()
+          break
+        case /* string entity_id */ 2:
+          message.entityId = reader.string()
+          break
+        case /* string entity_type */ 3:
+          message.entityType = reader.string()
+          break
+        case /* string user_id */ 4:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: Upvote,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string id = 1; */
+    if (message.id !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.id)
+    /* string entity_id = 2; */
+    if (message.entityId !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.entityId)
+    /* string entity_type = 3; */
+    if (message.entityType !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.entityType)
+    /* string user_id = 4; */
+    if (message.userId !== "")
+      writer.tag(4, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.Upvote
@@ -2469,88 +2434,88 @@ class Upvote$Type extends MessageType<Upvote> {
 export const Upvote = new Upvote$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUpvotesRequest$Type extends MessageType<GetUpvotesRequest> {
-	constructor() {
-		super("kampus.panoapi.GetUpvotesRequest", [
-			{
-				no: 1,
-				name: "entity_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 2,
-				name: "entity_type",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetUpvotesRequest>): GetUpvotesRequest {
-		const message = { entityId: "", entityType: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetUpvotesRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetUpvotesRequest
-	): GetUpvotesRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string entity_id */ 1:
-					message.entityId = reader.string()
-					break
-				case /* string entity_type */ 2:
-					message.entityType = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetUpvotesRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string entity_id = 1; */
-		if (message.entityId !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.entityId)
-		/* string entity_type = 2; */
-		if (message.entityType !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.entityType)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetUpvotesRequest", [
+      {
+        no: 1,
+        name: "entity_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 2,
+        name: "entity_type",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetUpvotesRequest>): GetUpvotesRequest {
+    const message = { entityId: "", entityType: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetUpvotesRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetUpvotesRequest
+  ): GetUpvotesRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string entity_id */ 1:
+          message.entityId = reader.string()
+          break
+        case /* string entity_type */ 2:
+          message.entityType = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetUpvotesRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string entity_id = 1; */
+    if (message.entityId !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.entityId)
+    /* string entity_type = 2; */
+    if (message.entityType !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.entityType)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetUpvotesRequest
@@ -2558,87 +2523,83 @@ class GetUpvotesRequest$Type extends MessageType<GetUpvotesRequest> {
 export const GetUpvotesRequest = new GetUpvotesRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUpvotesResponse$Type extends MessageType<GetUpvotesResponse> {
-	constructor() {
-		super("kampus.panoapi.GetUpvotesResponse", [
-			{
-				no: 1,
-				name: "upvotes",
-				kind: "message",
-				repeat: 1 /*RepeatType.PACKED*/,
-				T: () => Upvote,
-			},
-		])
-	}
-	create(value?: PartialMessage<GetUpvotesResponse>): GetUpvotesResponse {
-		const message = { upvotes: [] }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<GetUpvotesResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: GetUpvotesResponse
-	): GetUpvotesResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* repeated kampus.panoapi.Upvote upvotes */ 1:
-					message.upvotes.push(
-						Upvote.internalBinaryRead(
-							reader,
-							reader.uint32(),
-							options
-						)
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: GetUpvotesResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* repeated kampus.panoapi.Upvote upvotes = 1; */
-		for (let i = 0; i < message.upvotes.length; i++)
-			Upvote.internalBinaryWrite(
-				message.upvotes[i],
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.GetUpvotesResponse", [
+      {
+        no: 1,
+        name: "upvotes",
+        kind: "message",
+        repeat: 1 /*RepeatType.PACKED*/,
+        T: () => Upvote,
+      },
+    ])
+  }
+  create(value?: PartialMessage<GetUpvotesResponse>): GetUpvotesResponse {
+    const message = { upvotes: [] }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<GetUpvotesResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: GetUpvotesResponse
+  ): GetUpvotesResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* repeated kampus.panoapi.Upvote upvotes */ 1:
+          message.upvotes.push(
+            Upvote.internalBinaryRead(reader, reader.uint32(), options)
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: GetUpvotesResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* repeated kampus.panoapi.Upvote upvotes = 1; */
+    for (let i = 0; i < message.upvotes.length; i++)
+      Upvote.internalBinaryWrite(
+        message.upvotes[i],
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.GetUpvotesResponse
@@ -2646,100 +2607,100 @@ class GetUpvotesResponse$Type extends MessageType<GetUpvotesResponse> {
 export const GetUpvotesResponse = new GetUpvotesResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateUpvoteRequest$Type extends MessageType<CreateUpvoteRequest> {
-	constructor() {
-		super("kampus.panoapi.CreateUpvoteRequest", [
-			{
-				no: 1,
-				name: "entity_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 2,
-				name: "entity_type",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<CreateUpvoteRequest>): CreateUpvoteRequest {
-		const message = { entityId: "", entityType: "", userId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreateUpvoteRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreateUpvoteRequest
-	): CreateUpvoteRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string entity_id */ 1:
-					message.entityId = reader.string()
-					break
-				case /* string entity_type */ 2:
-					message.entityType = reader.string()
-					break
-				case /* string user_id */ 3:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreateUpvoteRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string entity_id = 1; */
-		if (message.entityId !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.entityId)
-		/* string entity_type = 2; */
-		if (message.entityType !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.entityType)
-		/* string user_id = 3; */
-		if (message.userId !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreateUpvoteRequest", [
+      {
+        no: 1,
+        name: "entity_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 2,
+        name: "entity_type",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<CreateUpvoteRequest>): CreateUpvoteRequest {
+    const message = { entityId: "", entityType: "", userId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreateUpvoteRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreateUpvoteRequest
+  ): CreateUpvoteRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string entity_id */ 1:
+          message.entityId = reader.string()
+          break
+        case /* string entity_type */ 2:
+          message.entityType = reader.string()
+          break
+        case /* string user_id */ 3:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreateUpvoteRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string entity_id = 1; */
+    if (message.entityId !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.entityId)
+    /* string entity_type = 2; */
+    if (message.entityType !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.entityType)
+    /* string user_id = 3; */
+    if (message.userId !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreateUpvoteRequest
@@ -2747,80 +2708,80 @@ class CreateUpvoteRequest$Type extends MessageType<CreateUpvoteRequest> {
 export const CreateUpvoteRequest = new CreateUpvoteRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateUpvoteResponse$Type extends MessageType<CreateUpvoteResponse> {
-	constructor() {
-		super("kampus.panoapi.CreateUpvoteResponse", [
-			{ no: 1, name: "upvote", kind: "message", T: () => Upvote },
-		])
-	}
-	create(value?: PartialMessage<CreateUpvoteResponse>): CreateUpvoteResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<CreateUpvoteResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: CreateUpvoteResponse
-	): CreateUpvoteResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* kampus.panoapi.Upvote upvote */ 1:
-					message.upvote = Upvote.internalBinaryRead(
-						reader,
-						reader.uint32(),
-						options,
-						message.upvote
-					)
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: CreateUpvoteResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* kampus.panoapi.Upvote upvote = 1; */
-		if (message.upvote)
-			Upvote.internalBinaryWrite(
-				message.upvote,
-				writer.tag(1, WireType.LengthDelimited).fork(),
-				options
-			).join()
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.CreateUpvoteResponse", [
+      { no: 1, name: "upvote", kind: "message", T: () => Upvote },
+    ])
+  }
+  create(value?: PartialMessage<CreateUpvoteResponse>): CreateUpvoteResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<CreateUpvoteResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: CreateUpvoteResponse
+  ): CreateUpvoteResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* kampus.panoapi.Upvote upvote */ 1:
+          message.upvote = Upvote.internalBinaryRead(
+            reader,
+            reader.uint32(),
+            options,
+            message.upvote
+          )
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: CreateUpvoteResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* kampus.panoapi.Upvote upvote = 1; */
+    if (message.upvote)
+      Upvote.internalBinaryWrite(
+        message.upvote,
+        writer.tag(1, WireType.LengthDelimited).fork(),
+        options
+      ).join()
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.CreateUpvoteResponse
@@ -2828,100 +2789,100 @@ class CreateUpvoteResponse$Type extends MessageType<CreateUpvoteResponse> {
 export const CreateUpvoteResponse = new CreateUpvoteResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteUpvoteRequest$Type extends MessageType<DeleteUpvoteRequest> {
-	constructor() {
-		super("kampus.panoapi.DeleteUpvoteRequest", [
-			{
-				no: 1,
-				name: "entity_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 2,
-				name: "entity_type",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<DeleteUpvoteRequest>): DeleteUpvoteRequest {
-		const message = { entityId: "", entityType: "", userId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeleteUpvoteRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeleteUpvoteRequest
-	): DeleteUpvoteRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string entity_id */ 1:
-					message.entityId = reader.string()
-					break
-				case /* string entity_type */ 2:
-					message.entityType = reader.string()
-					break
-				case /* string user_id */ 3:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: DeleteUpvoteRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string entity_id = 1; */
-		if (message.entityId !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.entityId)
-		/* string entity_type = 2; */
-		if (message.entityType !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.entityType)
-		/* string user_id = 3; */
-		if (message.userId !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeleteUpvoteRequest", [
+      {
+        no: 1,
+        name: "entity_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 2,
+        name: "entity_type",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<DeleteUpvoteRequest>): DeleteUpvoteRequest {
+    const message = { entityId: "", entityType: "", userId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeleteUpvoteRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeleteUpvoteRequest
+  ): DeleteUpvoteRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string entity_id */ 1:
+          message.entityId = reader.string()
+          break
+        case /* string entity_type */ 2:
+          message.entityType = reader.string()
+          break
+        case /* string user_id */ 3:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: DeleteUpvoteRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string entity_id = 1; */
+    if (message.entityId !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.entityId)
+    /* string entity_type = 2; */
+    if (message.entityType !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.entityType)
+    /* string user_id = 3; */
+    if (message.userId !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeleteUpvoteRequest
@@ -2929,41 +2890,41 @@ class DeleteUpvoteRequest$Type extends MessageType<DeleteUpvoteRequest> {
 export const DeleteUpvoteRequest = new DeleteUpvoteRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteUpvoteResponse$Type extends MessageType<DeleteUpvoteResponse> {
-	constructor() {
-		super("kampus.panoapi.DeleteUpvoteResponse", [])
-	}
-	create(value?: PartialMessage<DeleteUpvoteResponse>): DeleteUpvoteResponse {
-		const message = {}
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<DeleteUpvoteResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: DeleteUpvoteResponse
-	): DeleteUpvoteResponse {
-		return target ?? this.create()
-	}
-	internalBinaryWrite(
-		message: DeleteUpvoteResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.DeleteUpvoteResponse", [])
+  }
+  create(value?: PartialMessage<DeleteUpvoteResponse>): DeleteUpvoteResponse {
+    const message = {}
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<DeleteUpvoteResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: DeleteUpvoteResponse
+  ): DeleteUpvoteResponse {
+    return target ?? this.create()
+  }
+  internalBinaryWrite(
+    message: DeleteUpvoteResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.DeleteUpvoteResponse
@@ -2971,100 +2932,100 @@ class DeleteUpvoteResponse$Type extends MessageType<DeleteUpvoteResponse> {
 export const DeleteUpvoteResponse = new DeleteUpvoteResponse$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class IsUpvotedRequest$Type extends MessageType<IsUpvotedRequest> {
-	constructor() {
-		super("kampus.panoapi.IsUpvotedRequest", [
-			{
-				no: 1,
-				name: "entity_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 2,
-				name: "entity_type",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-			{
-				no: 3,
-				name: "user_id",
-				kind: "scalar",
-				T: 9 /*ScalarType.STRING*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<IsUpvotedRequest>): IsUpvotedRequest {
-		const message = { entityId: "", entityType: "", userId: "" }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<IsUpvotedRequest>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: IsUpvotedRequest
-	): IsUpvotedRequest {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* string entity_id */ 1:
-					message.entityId = reader.string()
-					break
-				case /* string entity_type */ 2:
-					message.entityType = reader.string()
-					break
-				case /* string user_id */ 3:
-					message.userId = reader.string()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: IsUpvotedRequest,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* string entity_id = 1; */
-		if (message.entityId !== "")
-			writer.tag(1, WireType.LengthDelimited).string(message.entityId)
-		/* string entity_type = 2; */
-		if (message.entityType !== "")
-			writer.tag(2, WireType.LengthDelimited).string(message.entityType)
-		/* string user_id = 3; */
-		if (message.userId !== "")
-			writer.tag(3, WireType.LengthDelimited).string(message.userId)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.IsUpvotedRequest", [
+      {
+        no: 1,
+        name: "entity_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 2,
+        name: "entity_type",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+      {
+        no: 3,
+        name: "user_id",
+        kind: "scalar",
+        T: 9 /*ScalarType.STRING*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<IsUpvotedRequest>): IsUpvotedRequest {
+    const message = { entityId: "", entityType: "", userId: "" }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<IsUpvotedRequest>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: IsUpvotedRequest
+  ): IsUpvotedRequest {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* string entity_id */ 1:
+          message.entityId = reader.string()
+          break
+        case /* string entity_type */ 2:
+          message.entityType = reader.string()
+          break
+        case /* string user_id */ 3:
+          message.userId = reader.string()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: IsUpvotedRequest,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* string entity_id = 1; */
+    if (message.entityId !== "")
+      writer.tag(1, WireType.LengthDelimited).string(message.entityId)
+    /* string entity_type = 2; */
+    if (message.entityType !== "")
+      writer.tag(2, WireType.LengthDelimited).string(message.entityType)
+    /* string user_id = 3; */
+    if (message.userId !== "")
+      writer.tag(3, WireType.LengthDelimited).string(message.userId)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.IsUpvotedRequest
@@ -3072,76 +3033,76 @@ class IsUpvotedRequest$Type extends MessageType<IsUpvotedRequest> {
 export const IsUpvotedRequest = new IsUpvotedRequest$Type()
 // @generated message type with reflection information, may provide speed optimized methods
 class IsUpvotedResponse$Type extends MessageType<IsUpvotedResponse> {
-	constructor() {
-		super("kampus.panoapi.IsUpvotedResponse", [
-			{
-				no: 1,
-				name: "is_upvoted",
-				kind: "scalar",
-				T: 8 /*ScalarType.BOOL*/,
-			},
-		])
-	}
-	create(value?: PartialMessage<IsUpvotedResponse>): IsUpvotedResponse {
-		const message = { isUpvoted: false }
-		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
-			enumerable: false,
-			value: this,
-		})
-		if (value !== undefined)
-			reflectionMergePartial<IsUpvotedResponse>(this, message, value)
-		return message
-	}
-	internalBinaryRead(
-		reader: IBinaryReader,
-		length: number,
-		options: BinaryReadOptions,
-		target?: IsUpvotedResponse
-	): IsUpvotedResponse {
-		let message = target ?? this.create(),
-			end = reader.pos + length
-		while (reader.pos < end) {
-			let [fieldNo, wireType] = reader.tag()
-			switch (fieldNo) {
-				case /* bool is_upvoted */ 1:
-					message.isUpvoted = reader.bool()
-					break
-				default:
-					let u = options.readUnknownField
-					if (u === "throw")
-						throw new globalThis.Error(
-							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
-						)
-					let d = reader.skip(wireType)
-					if (u !== false)
-						(u === true ? UnknownFieldHandler.onRead : u)(
-							this.typeName,
-							message,
-							fieldNo,
-							wireType,
-							d
-						)
-			}
-		}
-		return message
-	}
-	internalBinaryWrite(
-		message: IsUpvotedResponse,
-		writer: IBinaryWriter,
-		options: BinaryWriteOptions
-	): IBinaryWriter {
-		/* bool is_upvoted = 1; */
-		if (message.isUpvoted !== false)
-			writer.tag(1, WireType.Varint).bool(message.isUpvoted)
-		let u = options.writeUnknownFields
-		if (u !== false)
-			(u == true ? UnknownFieldHandler.onWrite : u)(
-				this.typeName,
-				message,
-				writer
-			)
-		return writer
-	}
+  constructor() {
+    super("kampus.panoapi.IsUpvotedResponse", [
+      {
+        no: 1,
+        name: "is_upvoted",
+        kind: "scalar",
+        T: 8 /*ScalarType.BOOL*/,
+      },
+    ])
+  }
+  create(value?: PartialMessage<IsUpvotedResponse>): IsUpvotedResponse {
+    const message = { isUpvoted: false }
+    globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
+      enumerable: false,
+      value: this,
+    })
+    if (value !== undefined)
+      reflectionMergePartial<IsUpvotedResponse>(this, message, value)
+    return message
+  }
+  internalBinaryRead(
+    reader: IBinaryReader,
+    length: number,
+    options: BinaryReadOptions,
+    target?: IsUpvotedResponse
+  ): IsUpvotedResponse {
+    let message = target ?? this.create(),
+      end = reader.pos + length
+    while (reader.pos < end) {
+      let [fieldNo, wireType] = reader.tag()
+      switch (fieldNo) {
+        case /* bool is_upvoted */ 1:
+          message.isUpvoted = reader.bool()
+          break
+        default:
+          let u = options.readUnknownField
+          if (u === "throw")
+            throw new globalThis.Error(
+              `Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`
+            )
+          let d = reader.skip(wireType)
+          if (u !== false)
+            (u === true ? UnknownFieldHandler.onRead : u)(
+              this.typeName,
+              message,
+              fieldNo,
+              wireType,
+              d
+            )
+      }
+    }
+    return message
+  }
+  internalBinaryWrite(
+    message: IsUpvotedResponse,
+    writer: IBinaryWriter,
+    options: BinaryWriteOptions
+  ): IBinaryWriter {
+    /* bool is_upvoted = 1; */
+    if (message.isUpvoted !== false)
+      writer.tag(1, WireType.Varint).bool(message.isUpvoted)
+    let u = options.writeUnknownFields
+    if (u !== false)
+      (u == true ? UnknownFieldHandler.onWrite : u)(
+        this.typeName,
+        message,
+        writer
+      )
+    return writer
+  }
 }
 /**
  * @generated MessageType for protobuf message kampus.panoapi.IsUpvotedResponse
@@ -3151,83 +3112,83 @@ export const IsUpvotedResponse = new IsUpvotedResponse$Type()
  * @generated ServiceType for protobuf service kampus.panoapi.PanoAPI
  */
 export const PanoAPI = new ServiceType("kampus.panoapi.PanoAPI", [
-	{
-		name: "GetBatchPosts",
-		options: {},
-		I: GetBatchPostsRequest,
-		O: GetBatchPostsResponse,
-	},
-	{ name: "GetPosts", options: {}, I: GetPostsRequest, O: GetPostsResponse },
-	{
-		name: "CreatePost",
-		options: {},
-		I: CreatePostRequest,
-		O: CreatePostResponse,
-	},
-	{
-		name: "UpdatePost",
-		options: {},
-		I: UpdatePostRequest,
-		O: UpdatePostResponse,
-	},
-	{
-		name: "DeletePost",
-		options: {},
-		I: DeletePostRequest,
-		O: DeletePostResponse,
-	},
-	{
-		name: "GetBatchComments",
-		options: {},
-		I: GetBatchCommentsRequest,
-		O: GetBatchCommentsResponse,
-	},
-	{
-		name: "GetComments",
-		options: {},
-		I: GetCommentsRequest,
-		O: GetCommentsResponse,
-	},
-	{
-		name: "CreateComment",
-		options: {},
-		I: CreateCommentRequest,
-		O: CreateCommentResponse,
-	},
-	{
-		name: "UpdateComment",
-		options: {},
-		I: UpdateCommentRequest,
-		O: UpdateCommentResponse,
-	},
-	{
-		name: "DeleteComment",
-		options: {},
-		I: DeleteCommentRequest,
-		O: DeleteCommentResponse,
-	},
-	{
-		name: "GetUpvotes",
-		options: {},
-		I: GetUpvotesRequest,
-		O: GetUpvotesResponse,
-	},
-	{
-		name: "CreateUpvote",
-		options: {},
-		I: CreateUpvoteRequest,
-		O: CreateUpvoteResponse,
-	},
-	{
-		name: "DeleteUpvote",
-		options: {},
-		I: DeleteUpvoteRequest,
-		O: DeleteUpvoteResponse,
-	},
-	{
-		name: "IsUpvoted",
-		options: {},
-		I: IsUpvotedRequest,
-		O: IsUpvotedResponse,
-	},
+  {
+    name: "GetBatchPosts",
+    options: {},
+    I: GetBatchPostsRequest,
+    O: GetBatchPostsResponse,
+  },
+  { name: "GetPosts", options: {}, I: GetPostsRequest, O: GetPostsResponse },
+  {
+    name: "CreatePost",
+    options: {},
+    I: CreatePostRequest,
+    O: CreatePostResponse,
+  },
+  {
+    name: "UpdatePost",
+    options: {},
+    I: UpdatePostRequest,
+    O: UpdatePostResponse,
+  },
+  {
+    name: "DeletePost",
+    options: {},
+    I: DeletePostRequest,
+    O: DeletePostResponse,
+  },
+  {
+    name: "GetBatchComments",
+    options: {},
+    I: GetBatchCommentsRequest,
+    O: GetBatchCommentsResponse,
+  },
+  {
+    name: "GetComments",
+    options: {},
+    I: GetCommentsRequest,
+    O: GetCommentsResponse,
+  },
+  {
+    name: "CreateComment",
+    options: {},
+    I: CreateCommentRequest,
+    O: CreateCommentResponse,
+  },
+  {
+    name: "UpdateComment",
+    options: {},
+    I: UpdateCommentRequest,
+    O: UpdateCommentResponse,
+  },
+  {
+    name: "DeleteComment",
+    options: {},
+    I: DeleteCommentRequest,
+    O: DeleteCommentResponse,
+  },
+  {
+    name: "GetUpvotes",
+    options: {},
+    I: GetUpvotesRequest,
+    O: GetUpvotesResponse,
+  },
+  {
+    name: "CreateUpvote",
+    options: {},
+    I: CreateUpvoteRequest,
+    O: CreateUpvoteResponse,
+  },
+  {
+    name: "DeleteUpvote",
+    options: {},
+    I: DeleteUpvoteRequest,
+    O: DeleteUpvoteResponse,
+  },
+  {
+    name: "IsUpvoted",
+    options: {},
+    I: IsUpvotedRequest,
+    O: IsUpvotedResponse,
+  },
 ])
