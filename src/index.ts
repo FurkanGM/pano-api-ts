@@ -3,12 +3,14 @@ import dotenv from 'dotenv';
 import Post from "./handlers/Post";
 import {createPanoAPIServer, PanoAPITwirp} from "./protos/service.twirp";
 import {PrismaClient} from '@prisma/client'
+import Upvote from "./handlers/Upvote";
 
 dotenv.config();
 
 const server = createPanoAPIServer({
     ...Post,
     ...Comment,
+    ...Upvote
 } as PanoAPITwirp);
 
 const app = express();
