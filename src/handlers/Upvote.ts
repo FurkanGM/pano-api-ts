@@ -11,6 +11,7 @@ import {
     IsUpvotedResponse
 } from "../protos/service";
 import {prisma} from "../index";
+import {CommentUpvote, Upvote} from "@prisma/client";
 
 const CreateUpvote = async (ctx: TwirpContext, request: CreateUpvoteRequest): Promise<CreateUpvoteResponse> => {
     const upvote = request.entityType === 'post' ? (
@@ -40,7 +41,8 @@ const CreateUpvote = async (ctx: TwirpContext, request: CreateUpvoteRequest): Pr
 }
 
 const GetUpvotes = async (ctx: TwirpContext, request: GetUpvotesRequest): Promise<GetUpvotesResponse> => {
-    let upvotes
+    let upvotes: Upvote[] | CommentUpvote[]
+
     if (request.entityType === 'post') {
         upvotes = await prisma.upvote.findMany({
             where: {
@@ -67,14 +69,14 @@ const GetUpvotes = async (ctx: TwirpContext, request: GetUpvotesRequest): Promis
 
 const DeleteUpvote = async (ctx: TwirpContext, request: DeleteUpvoteRequest): Promise<DeleteUpvoteResponse> => {
     if (request.entityType === 'post') {
-        const upvotes = await prisma.upvote.deleteMany({
+        await prisma.upvote.deleteMany({
             where: {
                 postID: request.entityId,
                 userID: request.userId
             }
         })
     } else {
-        const upvotes = await prisma.commentUpvote.deleteMany({
+        await prisma.commentUpvote.deleteMany({
             where: {
                 commentID: request.entityId,
                 userID: request.userId
@@ -86,30 +88,24 @@ const DeleteUpvote = async (ctx: TwirpContext, request: DeleteUpvoteRequest): Pr
 }
 
 const IsUpvoted = async (ctx: TwirpContext, request: IsUpvotedRequest): Promise<IsUpvotedResponse> => {
-    let isUpvoted: boolean
-
-    if (request.entityType === 'post') {
-        const upvotes = await prisma.upvote.findMany({
+    const upvote = request.entityType === 'post' ? (
+        await prisma.upvote.findMany({
             where: {
                 postID: request.entityId,
                 userID: request.userId
             }
         })
-
-        isUpvoted = upvotes.length > 0
-    } else {
-        const upvotes = await prisma.commentUpvote.findMany({
+    ) : (
+        await prisma.commentUpvote.findMany({
             where: {
                 commentID: request.entityId,
                 userID: request.userId
             }
         })
-
-        isUpvoted = upvotes.length > 0
-    }
+    )
 
     return IsUpvotedResponse.fromJson({
-        isUpvoted
+        isUpvoted: upvote.length > 0
     })
 }
 
