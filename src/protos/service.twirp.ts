@@ -90,7 +90,9 @@ export class PanoAPIClientJSON implements PanoAPIClient {
 		this.DeleteUpvote.bind(this)
 		this.IsUpvoted.bind(this)
 	}
-	GetBatchPosts(request: GetBatchPostsRequest): Promise<GetBatchPostsResponse> {
+	GetBatchPosts(
+		request: GetBatchPostsRequest
+	): Promise<GetBatchPostsResponse> {
 		const data = GetBatchPostsRequest.toJson(request, {
 			useProtoFieldName: true,
 			emitDefaultValues: false,
@@ -218,7 +220,9 @@ export class PanoAPIClientJSON implements PanoAPIClient {
 		)
 	}
 
-	CreateComment(request: CreateCommentRequest): Promise<CreateCommentResponse> {
+	CreateComment(
+		request: CreateCommentRequest
+	): Promise<CreateCommentResponse> {
 		const data = CreateCommentRequest.toJson(request, {
 			useProtoFieldName: true,
 			emitDefaultValues: false,
@@ -236,7 +240,9 @@ export class PanoAPIClientJSON implements PanoAPIClient {
 		)
 	}
 
-	UpdateComment(request: UpdateCommentRequest): Promise<UpdateCommentResponse> {
+	UpdateComment(
+		request: UpdateCommentRequest
+	): Promise<UpdateCommentResponse> {
 		const data = UpdateCommentRequest.toJson(request, {
 			useProtoFieldName: true,
 			emitDefaultValues: false,
@@ -254,7 +260,9 @@ export class PanoAPIClientJSON implements PanoAPIClient {
 		)
 	}
 
-	DeleteComment(request: DeleteCommentRequest): Promise<DeleteCommentResponse> {
+	DeleteComment(
+		request: DeleteCommentRequest
+	): Promise<DeleteCommentResponse> {
 		const data = DeleteCommentRequest.toJson(request, {
 			useProtoFieldName: true,
 			emitDefaultValues: false,
@@ -364,7 +372,9 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
 		this.DeleteUpvote.bind(this)
 		this.IsUpvoted.bind(this)
 	}
-	GetBatchPosts(request: GetBatchPostsRequest): Promise<GetBatchPostsResponse> {
+	GetBatchPosts(
+		request: GetBatchPostsRequest
+	): Promise<GetBatchPostsResponse> {
 		const data = GetBatchPostsRequest.toBinary(request)
 		const promise = this.rpc.request(
 			"kampus.panoapi.PanoAPI",
@@ -457,7 +467,9 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
 		)
 	}
 
-	CreateComment(request: CreateCommentRequest): Promise<CreateCommentResponse> {
+	CreateComment(
+		request: CreateCommentRequest
+	): Promise<CreateCommentResponse> {
 		const data = CreateCommentRequest.toBinary(request)
 		const promise = this.rpc.request(
 			"kampus.panoapi.PanoAPI",
@@ -470,7 +482,9 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
 		)
 	}
 
-	UpdateComment(request: UpdateCommentRequest): Promise<UpdateCommentResponse> {
+	UpdateComment(
+		request: UpdateCommentRequest
+	): Promise<UpdateCommentResponse> {
 		const data = UpdateCommentRequest.toBinary(request)
 		const promise = this.rpc.request(
 			"kampus.panoapi.PanoAPI",
@@ -483,7 +497,9 @@ export class PanoAPIClientProtobuf implements PanoAPIClient {
 		)
 	}
 
-	DeleteComment(request: DeleteCommentRequest): Promise<DeleteCommentResponse> {
+	DeleteComment(
+		request: DeleteCommentRequest
+	): Promise<DeleteCommentResponse> {
 		const data = DeleteCommentRequest.toBinary(request)
 		const promise = this.rpc.request(
 			"kampus.panoapi.PanoAPI",
@@ -566,7 +582,10 @@ export interface PanoAPITwirp<T extends TwirpContext = TwirpContext> {
 		ctx: T,
 		request: GetBatchCommentsRequest
 	): Promise<GetBatchCommentsResponse>
-	GetComments(ctx: T, request: GetCommentsRequest): Promise<GetCommentsResponse>
+	GetComments(
+		ctx: T,
+		request: GetCommentsRequest
+	): Promise<GetCommentsResponse>
 	CreateComment(
 		ctx: T,
 		request: CreateCommentRequest
@@ -667,44 +686,80 @@ function matchPanoAPIRoute<T extends TwirpContext = TwirpContext>(
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, GetPostsRequest, GetPostsResponse>[]
+				interceptors?: Interceptor<
+					T,
+					GetPostsRequest,
+					GetPostsResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "GetPosts" }
 				await events.onMatch(ctx)
-				return handlePanoAPIGetPostsRequest(ctx, service, data, interceptors)
+				return handlePanoAPIGetPostsRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "CreatePost":
 			return async (
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, CreatePostRequest, CreatePostResponse>[]
+				interceptors?: Interceptor<
+					T,
+					CreatePostRequest,
+					CreatePostResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "CreatePost" }
 				await events.onMatch(ctx)
-				return handlePanoAPICreatePostRequest(ctx, service, data, interceptors)
+				return handlePanoAPICreatePostRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "UpdatePost":
 			return async (
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, UpdatePostRequest, UpdatePostResponse>[]
+				interceptors?: Interceptor<
+					T,
+					UpdatePostRequest,
+					UpdatePostResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "UpdatePost" }
 				await events.onMatch(ctx)
-				return handlePanoAPIUpdatePostRequest(ctx, service, data, interceptors)
+				return handlePanoAPIUpdatePostRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "DeletePost":
 			return async (
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, DeletePostRequest, DeletePostResponse>[]
+				interceptors?: Interceptor<
+					T,
+					DeletePostRequest,
+					DeletePostResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "DeletePost" }
 				await events.onMatch(ctx)
-				return handlePanoAPIDeletePostRequest(ctx, service, data, interceptors)
+				return handlePanoAPIDeletePostRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "GetBatchComments":
 			return async (
@@ -731,11 +786,20 @@ function matchPanoAPIRoute<T extends TwirpContext = TwirpContext>(
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, GetCommentsRequest, GetCommentsResponse>[]
+				interceptors?: Interceptor<
+					T,
+					GetCommentsRequest,
+					GetCommentsResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "GetComments" }
 				await events.onMatch(ctx)
-				return handlePanoAPIGetCommentsRequest(ctx, service, data, interceptors)
+				return handlePanoAPIGetCommentsRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "CreateComment":
 			return async (
@@ -802,11 +866,20 @@ function matchPanoAPIRoute<T extends TwirpContext = TwirpContext>(
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, GetUpvotesRequest, GetUpvotesResponse>[]
+				interceptors?: Interceptor<
+					T,
+					GetUpvotesRequest,
+					GetUpvotesResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "GetUpvotes" }
 				await events.onMatch(ctx)
-				return handlePanoAPIGetUpvotesRequest(ctx, service, data, interceptors)
+				return handlePanoAPIGetUpvotesRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		case "CreateUpvote":
 			return async (
@@ -853,11 +926,20 @@ function matchPanoAPIRoute<T extends TwirpContext = TwirpContext>(
 				ctx: T,
 				service: PanoAPITwirp,
 				data: Buffer,
-				interceptors?: Interceptor<T, IsUpvotedRequest, IsUpvotedResponse>[]
+				interceptors?: Interceptor<
+					T,
+					IsUpvotedRequest,
+					IsUpvotedResponse
+				>[]
 			) => {
 				ctx = { ...ctx, methodName: "IsUpvoted" }
 				await events.onMatch(ctx)
-				return handlePanoAPIIsUpvotedRequest(ctx, service, data, interceptors)
+				return handlePanoAPIIsUpvotedRequest(
+					ctx,
+					service,
+					data,
+					interceptors
+				)
 			}
 		default:
 			events.onNotFound()
@@ -876,7 +958,12 @@ function handlePanoAPIGetBatchPostsRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIGetBatchPostsJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIGetBatchPostsJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIGetBatchPostsProtobuf<T>(
 				ctx,
@@ -898,9 +985,19 @@ function handlePanoAPIGetPostsRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIGetPostsJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIGetPostsJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
-			return handlePanoAPIGetPostsProtobuf<T>(ctx, service, data, interceptors)
+			return handlePanoAPIGetPostsProtobuf<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		default:
 			const msg = "unexpected Content-Type"
 			throw new TwirpError(TwirpErrorCode.BadRoute, msg)
@@ -915,7 +1012,12 @@ function handlePanoAPICreatePostRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPICreatePostJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPICreatePostJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPICreatePostProtobuf<T>(
 				ctx,
@@ -937,7 +1039,12 @@ function handlePanoAPIUpdatePostRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIUpdatePostJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIUpdatePostJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIUpdatePostProtobuf<T>(
 				ctx,
@@ -959,7 +1066,12 @@ function handlePanoAPIDeletePostRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIDeletePostJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIDeletePostJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIDeletePostProtobuf<T>(
 				ctx,
@@ -1014,7 +1126,12 @@ function handlePanoAPIGetCommentsRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIGetCommentsJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIGetCommentsJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIGetCommentsProtobuf<T>(
 				ctx,
@@ -1038,7 +1155,12 @@ function handlePanoAPICreateCommentRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPICreateCommentJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPICreateCommentJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPICreateCommentProtobuf<T>(
 				ctx,
@@ -1062,7 +1184,12 @@ function handlePanoAPIUpdateCommentRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIUpdateCommentJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIUpdateCommentJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIUpdateCommentProtobuf<T>(
 				ctx,
@@ -1086,7 +1213,12 @@ function handlePanoAPIDeleteCommentRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIDeleteCommentJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIDeleteCommentJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIDeleteCommentProtobuf<T>(
 				ctx,
@@ -1108,7 +1240,12 @@ function handlePanoAPIGetUpvotesRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIGetUpvotesJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIGetUpvotesJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIGetUpvotesProtobuf<T>(
 				ctx,
@@ -1132,7 +1269,12 @@ function handlePanoAPICreateUpvoteRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPICreateUpvoteJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPICreateUpvoteJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPICreateUpvoteProtobuf<T>(
 				ctx,
@@ -1156,7 +1298,12 @@ function handlePanoAPIDeleteUpvoteRequest<
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIDeleteUpvoteJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIDeleteUpvoteJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
 			return handlePanoAPIDeleteUpvoteProtobuf<T>(
 				ctx,
@@ -1178,9 +1325,19 @@ function handlePanoAPIIsUpvotedRequest<T extends TwirpContext = TwirpContext>(
 ): Promise<string | Uint8Array> {
 	switch (ctx.contentType) {
 		case TwirpContentType.JSON:
-			return handlePanoAPIIsUpvotedJSON<T>(ctx, service, data, interceptors)
+			return handlePanoAPIIsUpvotedJSON<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		case TwirpContentType.Protobuf:
-			return handlePanoAPIIsUpvotedProtobuf<T>(ctx, service, data, interceptors)
+			return handlePanoAPIIsUpvotedProtobuf<T>(
+				ctx,
+				service,
+				data,
+				interceptors
+			)
 		default:
 			const msg = "unexpected Content-Type"
 			throw new TwirpError(TwirpErrorCode.BadRoute, msg)
@@ -1205,7 +1362,10 @@ async function handlePanoAPIGetBatchPostsJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1245,7 +1405,10 @@ async function handlePanoAPIGetPostsJSON<T extends TwirpContext = TwirpContext>(
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1289,7 +1452,10 @@ async function handlePanoAPICreatePostJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1333,7 +1499,10 @@ async function handlePanoAPIUpdatePostJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1377,7 +1546,10 @@ async function handlePanoAPIDeletePostJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1425,7 +1597,10 @@ async function handlePanoAPIGetBatchCommentsJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1469,7 +1644,10 @@ async function handlePanoAPIGetCommentsJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1513,7 +1691,10 @@ async function handlePanoAPICreateCommentJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1557,7 +1738,10 @@ async function handlePanoAPIUpdateCommentJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1601,7 +1785,10 @@ async function handlePanoAPIDeleteCommentJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1645,7 +1832,10 @@ async function handlePanoAPIGetUpvotesJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1689,7 +1879,10 @@ async function handlePanoAPICreateUpvoteJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1733,7 +1926,10 @@ async function handlePanoAPIDeleteUpvoteJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1775,7 +1971,10 @@ async function handlePanoAPIIsUpvotedJSON<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the json request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1815,7 +2014,10 @@ async function handlePanoAPIGetBatchPostsProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1851,7 +2053,10 @@ async function handlePanoAPIGetPostsProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1887,7 +2092,10 @@ async function handlePanoAPICreatePostProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1923,7 +2131,10 @@ async function handlePanoAPIUpdatePostProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1959,7 +2170,10 @@ async function handlePanoAPIDeletePostProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -1999,7 +2213,10 @@ async function handlePanoAPIGetBatchCommentsProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2035,7 +2252,10 @@ async function handlePanoAPIGetCommentsProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2071,7 +2291,10 @@ async function handlePanoAPICreateCommentProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2107,7 +2330,10 @@ async function handlePanoAPIUpdateCommentProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2143,7 +2369,10 @@ async function handlePanoAPIDeleteCommentProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2179,7 +2408,10 @@ async function handlePanoAPIGetUpvotesProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2215,7 +2447,10 @@ async function handlePanoAPICreateUpvoteProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2251,7 +2486,10 @@ async function handlePanoAPIDeleteUpvoteProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 
@@ -2287,7 +2525,10 @@ async function handlePanoAPIIsUpvotedProtobuf<
 	} catch (e) {
 		if (e instanceof Error) {
 			const msg = "the protobuf request could not be decoded"
-			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(e, true)
+			throw new TwirpError(TwirpErrorCode.Malformed, msg).withCause(
+				e,
+				true
+			)
 		}
 	}
 

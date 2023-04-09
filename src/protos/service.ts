@@ -447,7 +447,8 @@ class Post$Type extends MessageType<Post> {
 			enumerable: false,
 			value: this,
 		})
-		if (value !== undefined) reflectionMergePartial<Post>(this, message, value)
+		if (value !== undefined)
+			reflectionMergePartial<Post>(this, message, value)
 		return message
 	}
 	internalBinaryRead(
@@ -626,7 +627,9 @@ class GetBatchPostsResponse$Type extends MessageType<GetBatchPostsResponse> {
 			},
 		])
 	}
-	create(value?: PartialMessage<GetBatchPostsResponse>): GetBatchPostsResponse {
+	create(
+		value?: PartialMessage<GetBatchPostsResponse>
+	): GetBatchPostsResponse {
 		const message = { posts: [] }
 		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
 			enumerable: false,
@@ -649,7 +652,11 @@ class GetBatchPostsResponse$Type extends MessageType<GetBatchPostsResponse> {
 			switch (fieldNo) {
 				case /* repeated kampus.panoapi.Post posts */ 1:
 					message.posts.push(
-						Post.internalBinaryRead(reader, reader.uint32(), options)
+						Post.internalBinaryRead(
+							reader,
+							reader.uint32(),
+							options
+						)
 					)
 					break
 				default:
@@ -762,7 +769,8 @@ class GetPostsRequest$Type extends MessageType<GetPostsRequest> {
 		options: BinaryWriteOptions
 	): IBinaryWriter {
 		/* int32 limit = 1; */
-		if (message.limit !== 0) writer.tag(1, WireType.Varint).int32(message.limit)
+		if (message.limit !== 0)
+			writer.tag(1, WireType.Varint).int32(message.limit)
 		/* int32 offset = 2; */
 		if (message.offset !== 0)
 			writer.tag(2, WireType.Varint).int32(message.offset)
@@ -816,7 +824,11 @@ class GetPostsResponse$Type extends MessageType<GetPostsResponse> {
 			switch (fieldNo) {
 				case /* repeated kampus.panoapi.Post posts */ 1:
 					message.posts.push(
-						Post.internalBinaryRead(reader, reader.uint32(), options)
+						Post.internalBinaryRead(
+							reader,
+							reader.uint32(),
+							options
+						)
 					)
 					break
 				default:
@@ -1477,7 +1489,11 @@ class GetBatchCommentsRequest$Type extends MessageType<GetBatchCommentsRequest> 
 			value: this,
 		})
 		if (value !== undefined)
-			reflectionMergePartial<GetBatchCommentsRequest>(this, message, value)
+			reflectionMergePartial<GetBatchCommentsRequest>(
+				this,
+				message,
+				value
+			)
 		return message
 	}
 	internalBinaryRead(
@@ -1558,7 +1574,11 @@ class GetBatchCommentsResponse$Type extends MessageType<GetBatchCommentsResponse
 			value: this,
 		})
 		if (value !== undefined)
-			reflectionMergePartial<GetBatchCommentsResponse>(this, message, value)
+			reflectionMergePartial<GetBatchCommentsResponse>(
+				this,
+				message,
+				value
+			)
 		return message
 	}
 	internalBinaryRead(
@@ -1574,7 +1594,11 @@ class GetBatchCommentsResponse$Type extends MessageType<GetBatchCommentsResponse
 			switch (fieldNo) {
 				case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
 					message.comments.push(
-						Comment.internalBinaryRead(reader, reader.uint32(), options)
+						Comment.internalBinaryRead(
+							reader,
+							reader.uint32(),
+							options
+						)
 					)
 					break
 				default:
@@ -1687,7 +1711,8 @@ class GetCommentsRequest$Type extends MessageType<GetCommentsRequest> {
 		options: BinaryWriteOptions
 	): IBinaryWriter {
 		/* int32 limit = 1; */
-		if (message.limit !== 0) writer.tag(1, WireType.Varint).int32(message.limit)
+		if (message.limit !== 0)
+			writer.tag(1, WireType.Varint).int32(message.limit)
 		/* int32 offset = 2; */
 		if (message.offset !== 0)
 			writer.tag(2, WireType.Varint).int32(message.offset)
@@ -1742,7 +1767,11 @@ class GetCommentsResponse$Type extends MessageType<GetCommentsResponse> {
 			switch (fieldNo) {
 				case /* repeated kampus.panoapi.Comment Comments = 1 [json_name = "Comments"];*/ 1:
 					message.comments.push(
-						Comment.internalBinaryRead(reader, reader.uint32(), options)
+						Comment.internalBinaryRead(
+							reader,
+							reader.uint32(),
+							options
+						)
 					)
 					break
 				default:
@@ -1920,7 +1949,9 @@ class CreateCommentResponse$Type extends MessageType<CreateCommentResponse> {
 			},
 		])
 	}
-	create(value?: PartialMessage<CreateCommentResponse>): CreateCommentResponse {
+	create(
+		value?: PartialMessage<CreateCommentResponse>
+	): CreateCommentResponse {
 		const message = {}
 		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
 			enumerable: false,
@@ -2091,7 +2122,9 @@ class UpdateCommentResponse$Type extends MessageType<UpdateCommentResponse> {
 			},
 		])
 	}
-	create(value?: PartialMessage<UpdateCommentResponse>): UpdateCommentResponse {
+	create(
+		value?: PartialMessage<UpdateCommentResponse>
+	): UpdateCommentResponse {
 		const message = {}
 		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
 			enumerable: false,
@@ -2250,7 +2283,9 @@ class DeleteCommentResponse$Type extends MessageType<DeleteCommentResponse> {
 			},
 		])
 	}
-	create(value?: PartialMessage<DeleteCommentResponse>): DeleteCommentResponse {
+	create(
+		value?: PartialMessage<DeleteCommentResponse>
+	): DeleteCommentResponse {
 		const message = {}
 		globalThis.Object.defineProperty(message, MESSAGE_TYPE, {
 			enumerable: false,
@@ -2557,7 +2592,11 @@ class GetUpvotesResponse$Type extends MessageType<GetUpvotesResponse> {
 			switch (fieldNo) {
 				case /* repeated kampus.panoapi.Upvote upvotes */ 1:
 					message.upvotes.push(
-						Upvote.internalBinaryRead(reader, reader.uint32(), options)
+						Upvote.internalBinaryRead(
+							reader,
+							reader.uint32(),
+							options
+						)
 					)
 					break
 				default:

@@ -280,7 +280,8 @@ class DoubleValue$Type extends MessageType<DoubleValue> {
 		options: BinaryWriteOptions
 	): IBinaryWriter {
 		/* double value = 1; */
-		if (message.value !== 0) writer.tag(1, WireType.Bit64).double(message.value)
+		if (message.value !== 0)
+			writer.tag(1, WireType.Bit64).double(message.value)
 		let u = options.writeUnknownFields
 		if (u !== false)
 			(u == true ? UnknownFieldHandler.onWrite : u)(
@@ -305,7 +306,10 @@ class FloatValue$Type extends MessageType<FloatValue> {
 	/**
 	 * Encode `FloatValue` to JSON number.
 	 */
-	internalJsonWrite(message: FloatValue, options: JsonWriteOptions): JsonValue {
+	internalJsonWrite(
+		message: FloatValue,
+		options: JsonWriteOptions
+	): JsonValue {
 		return this.refJsonWriter.scalar(1, message.value, "value", false, true)
 	}
 	/**
@@ -374,7 +378,8 @@ class FloatValue$Type extends MessageType<FloatValue> {
 		options: BinaryWriteOptions
 	): IBinaryWriter {
 		/* float value = 1; */
-		if (message.value !== 0) writer.tag(1, WireType.Bit32).float(message.value)
+		if (message.value !== 0)
+			writer.tag(1, WireType.Bit32).float(message.value)
 		let u = options.writeUnknownFields
 		if (u !== false)
 			(u == true ? UnknownFieldHandler.onWrite : u)(
@@ -405,7 +410,10 @@ class Int64Value$Type extends MessageType<Int64Value> {
 	/**
 	 * Encode `Int64Value` to JSON string.
 	 */
-	internalJsonWrite(message: Int64Value, options: JsonWriteOptions): JsonValue {
+	internalJsonWrite(
+		message: Int64Value,
+		options: JsonWriteOptions
+	): JsonValue {
 		return this.refJsonWriter.scalar(
 			ScalarType.INT64,
 			message.value,
@@ -616,7 +624,10 @@ class Int32Value$Type extends MessageType<Int32Value> {
 	/**
 	 * Encode `Int32Value` to JSON string.
 	 */
-	internalJsonWrite(message: Int32Value, options: JsonWriteOptions): JsonValue {
+	internalJsonWrite(
+		message: Int32Value,
+		options: JsonWriteOptions
+	): JsonValue {
 		return this.refJsonWriter.scalar(5, message.value, "value", false, true)
 	}
 	/**
@@ -685,7 +696,8 @@ class Int32Value$Type extends MessageType<Int32Value> {
 		options: BinaryWriteOptions
 	): IBinaryWriter {
 		/* int32 value = 1; */
-		if (message.value !== 0) writer.tag(1, WireType.Varint).int32(message.value)
+		if (message.value !== 0)
+			writer.tag(1, WireType.Varint).int32(message.value)
 		let u = options.writeUnknownFields
 		if (u !== false)
 			(u == true ? UnknownFieldHandler.onWrite : u)(
@@ -719,7 +731,13 @@ class UInt32Value$Type extends MessageType<UInt32Value> {
 		message: UInt32Value,
 		options: JsonWriteOptions
 	): JsonValue {
-		return this.refJsonWriter.scalar(13, message.value, "value", false, true)
+		return this.refJsonWriter.scalar(
+			13,
+			message.value,
+			"value",
+			false,
+			true
+		)
 	}
 	/**
 	 * Decode `UInt32Value` from JSON string.
@@ -813,7 +831,10 @@ class BoolValue$Type extends MessageType<BoolValue> {
 	/**
 	 * Encode `BoolValue` to JSON bool.
 	 */
-	internalJsonWrite(message: BoolValue, options: JsonWriteOptions): JsonValue {
+	internalJsonWrite(
+		message: BoolValue,
+		options: JsonWriteOptions
+	): JsonValue {
 		return message.value
 	}
 	/**
@@ -1016,8 +1037,17 @@ class BytesValue$Type extends MessageType<BytesValue> {
 	/**
 	 * Encode `BytesValue` to JSON string.
 	 */
-	internalJsonWrite(message: BytesValue, options: JsonWriteOptions): JsonValue {
-		return this.refJsonWriter.scalar(12, message.value, "value", false, true)
+	internalJsonWrite(
+		message: BytesValue,
+		options: JsonWriteOptions
+	): JsonValue {
+		return this.refJsonWriter.scalar(
+			12,
+			message.value,
+			"value",
+			false,
+			true
+		)
 	}
 	/**
 	 * Decode `BytesValue` from JSON string.
